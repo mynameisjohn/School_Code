@@ -1,0 +1,227 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 0pt
+\parskip 1mm
+\usepackage{amsmath}
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+
+{\Large\bf MA 555 - Numerical Analysis}
+
+\bigskip
+
+{\large\bf Assignment \# 5}
+\smallskip
+
+{\large\bf John Joseph}
+\end{center}
+
+{\bf Problem 1}
+\smallskip
+
+We will solve for the optimal values of $\alpha$ by setting $y(x)$ equal to several simple functions. We will assume that $y_0=y(-h)$,$y_1=y(0)$,$y_2=y(h)$.
+
+\begin{eqnarray*}
+y_2'=\alpha_0y_0+\alpha_1y_1+\alpha_2y_2 \\
+y(x)=1 \\
+y_2'=0=\alpha_0+\alpha_1+\alpha_2 \\
+y(x)=x \\
+y_2'=1=-\alpha_0h+\alpha_2h \\
+y(x)=x^2 \\
+y_2'=2x|_{x=h}=2h=\alpha_0h^2+\alpha_2h^2 \\
+\end{eqnarray*}
+
+We now have three equations and three unknowns. Solving this system yields the result
+
+\begin{equation*}
+y_2'=\frac{y_0-4y_1+3y_2}{2h}
+\end{equation*}
+\bigskip
+
+{\bf Problem 2}
+\smallskip
+
+We will solve for the four values of $\alpha$ as in problem 1. The ponts are distributed in the same way, and $y_3=y(2h)$.
+
+\begin{eqnarray*}
+y_0'=\alpha_0y_0+\alpha_1y_1+\alpha_2y_2+\alpha_3y_3 \\
+y(x)=1 \\
+y_0'=0=\alpha_0+\alpha_1+\alpha_2+\alpha_3 \\
+y(x)=x \\
+y_0'=1=h(-\alpha_0+\alpha_2+2\alpha_3) \\
+y(x)=x^2 \\
+y_0'=-2h=h^2(\alpha_0+\alpha_2+4\alpha_3) \\
+y(x)=x^3 \\
+y_0'=3h^2=h^3(-\alpha_0+\alpha_2+8\alpha_3) \\
+\end{eqnarray*} 
+
+We now have a system of four equations and 4 unknowns. Solving this system yields the result 
+
+\begin{equation*}
+y_0'=\frac{-\frac{11}{6}y_0+3y_1-\frac{3}{2}y_2+\frac{1}{3}y_3}{h}
+\end{equation*}
+\bigskip
+
+{\bf Problem  3}
+\smallskip
+
+Problem 3 is similar to problem 2, but we are now approximating the second derivative. We proceed in the same fashion. 
+
+\begin{eqnarray*}
+y_0''=\alpha_0y_0+\alpha_1y_1+\alpha_2y_2+\alpha_3y_3 \\
+y(x)=1 \\
+y_0''=0=\alpha_0+\alpha_1+\alpha_2+\alpha_3 \\
+y(x)=x \\
+y_0''=0=h(-\alpha_0+\alpha_2+2\alpha_3) \\
+y(x)=x^2 \\
+y_0''=2=h^2(\alpha_0+\alpha_2+4\alpha_3) \\
+y(x)=x^3 \\
+y_0'=-6h=h^3(-\alpha_0+\alpha_2+8\alpha_3) \\
+\end{eqnarray*}
+
+We have a system of four equations and four unknowns, which come out to be
+
+\begin{equation*}
+\frac{2y_0-5y_1+4y_2-y_3}{h^2}
+\end{equation*} 
+
+{\bf Problem  4}
+\smallskip
+
+We are asked to approximate $y''(x)+f(x)=0$ at $x=0$ as well as we can by fixing three values of $\alpha$ such that 
+
+\begin{equation*}
+\frac{y_1-2y_2+y_3}{h^2}+\alpha_1f_1+\alpha_2f_2+\alpha_3f_3
+\end{equation*}
+
+We begin by writing the Taylor expansion of our variables centered around point 2. The differential equation we are approximating is good for any higher order derivative, and since we have three unknowns we will take $y$ out to its fourth derivative and $f$ out to its second derivative. 
+
+\begin{eqnarray*}
+y_1=y_2-hy_2'+\frac{1}{2}h^2y_2''-\frac{1}{6}h^3y_2^{(3)}+\frac{1}{24}h^4y_2^{(4)} \\
+y_2=y_2 \\
+y_3=y_2+hy_2'+\frac{1}{2}h^2y_2''+\frac{1}{6}h^3y_2^{(3)}+\frac{1}{24}h^4y_2^{(4)} \\
+f_1=f_2-hf_2'+\frac{1}{2}h^2f_2'' \\
+f_2=f_2 \\
+f_3=f_2+hf_2'+\frac{1}{2}h^2f_2'' \\
+\end{eqnarray*}
+
+Inserting these values into the approximation and rearranging terms, we are left with
+
+\begin{equation*}
+(y_2''+f_2(\alpha_1+\alpha_2+\alpha_3))+hf_2'(-\alpha_1+\alpha_3)+h^2(\frac{1}{12}y_2^{(4)}+\frac{1}{2}f_2'(\alpha_1+\alpha_2))=0
+\end{equation*}
+
+In order for this to hold true, we rely on the supplied differential equation and demand the following:
+
+\begin{eqnarray*}
+\alpha_1+\alpha_2+\alpha_3=1 \\
+-\alpha_1+\alpha_3=0 \\
+\frac{1}{2}(\alpha_1+\alpha_3)=\frac{1}{12} \\
+\end{eqnarray*}
+
+Solving this system of three equations with three uknowns yields that
+
+\begin{equation*}
+\frac{y_1-2y_2+y_3}{h^2}+\frac{1}{12}f_1+\frac{5}{6}f_2+\frac{1}{12}f_3
+\end{equation*}
+\bigskip
+
+{\bf Problem  5}
+\smallskip
+
+We are asked to approximate the BVP $y''+xy'=1+x$ for $0 \leq x \leq 1$ given $y(0)=0$ and $y'(1)=0$. We make the following approximations:
+
+\begin{eqnarray*}
+y_n''=\frac{y_{n-1}-2y_n+y_{n+1}}{h^2} \\
+y_n'=\frac{y_{n+1}-y_{n-1}}{2h}
+\end{eqnarray*} 
+
+We discretize a mesh of four intervals size $h=\frac{1}{4}$, and to solve the equation at $x=1$ we use the fact that $y'(1)=0$ to introduce a fictitious fifth point. Note that
+
+\begin{equation*}
+y_4'=\frac{y_5-y_3}{2h}=0 
+\end{equation*}
+
+From which we see that $y_5=y_3$. 
+
+\begin{eqnarray*}
+n=1 \\
+\frac{y_0-2y_1+y_2}{h^2}+\frac{h(y_2-y_0)}{2h}=\frac{1}{h^2}[-2y_1+y_2(1+\frac{h^2}{2})]=1+h \\
+n=2 \\
+\frac{y_1-2y_2+y_3}{h^2}+\frac{h(y_3-y_1)}{2h}=\frac{1}{h^2}[y_1(1-h^2)-2y_2+y_3(1+h^2)]=1+2h \\
+n=3 \\
+\frac{y_2-2y_3+y_4}{h^2}+\frac{h(y_4-y_2)}{2h}=\frac{1}{h^2}[y_2(1-\frac{3h^2}{2})-2y_3+y_4(1+\frac{3h^2}{2})]=1+3h \\
+n=4 \\
+\frac{y_3-2y_4+y_5}{h^2}+\frac{h(y_5-y_3)}{2h}=\frac{1}{h^2}[2y_3-2y_4]=1+4h \\
+\end{eqnarray*}
+
+\vfil\eject
+
+We can write this system of equations as a Matrix-Vector multiplication
+
+\begin{equation*}
+\frac{1}{h^2}
+ \begin{bmatrix}
+	-2 & (1+\frac{h^2}{2}) & 0 & 0  \\[0.2em]
+	(1-h^2) & -2 & (1+h^2) & 0  \\[0.2em]
+	0 & (1-\frac{3h^2}{2}) & -2 & (1+\frac{3h^2}{2})  \\[0.2em]
+	0 & 0 & 2 & -2  \\[0.2em]
+     \end{bmatrix}
+ \begin{bmatrix}
+	y_1           \\[0.2em]
+	y_2          \\[0.2em]
+	y_3          \\[0.2em]
+	y_4           \\[0.2em]
+     \end{bmatrix}
+=
+ \begin{bmatrix}
+	(1+h)           \\[0.2em]
+	(1+2h)          \\[0.2em]
+	(1+3h)          \\[0.2em]
+	(1+4h)           \\[0.2em]
+     \end{bmatrix}
+\end{equation*}
+Though I will not show the results, inverting this matrix in Mathematica and multiplying it by $f$ yields the correct result. 
+\bigskip
+
+{\bf Problem 6}
+\smallskip
+
+Using the 3-point Gauss method:
+
+\begin{eqnarray*}
+x(\xi)=\frac{1}{2}[(0)(1+\xi)+(1)(1+\xi)] \\
+dx = \frac{1}{2} d\xi \\
+x_1=x(\xi_1)=x(-\frac{\sqrt{15}}{5})=\frac{5-\sqrt{15}}{10} \\
+x_2=x(\xi_2)=x(0)=\frac{1}{2} \\
+x_3=x(\xi_3)=x(\frac{\sqrt{15}}{5})=\frac{5+\sqrt{15}}{10} \\
+\int_0^1{e^x dx} \approx \frac{1}{2}[\frac{5}{9}e^{x_1}+\frac{8}{9}e^{x_2}+\frac{5}{9}e^{x_3}]=1.7182810043725216 \\
+\int_0^1{e^x dx} = e-1 = 1.718281828459045 \\
+error = |1.7182810043725216-1.718281828459045|=8.240865234654393e-07
+\end{eqnarray*}
+
+\vfil\eject
+
+{\bf Problem 7}
+
+In order to solve this problem I assume we are able to use the given value of $I$. I will not show any numerical values until the final values for $p$ and $c$ are computed.
+
+\begin{eqnarray*}
+x(\xi)=\frac{1}{2}[(0)(1+\xi)+(2)(1+\xi)] \\
+dx=d\xi \\
+I_2=e^{x_{12}}+e^{x_{22}} \\
+x_{12}=x(\xi_{12})=x(-\frac{\sqrt{3}}{3})=1-\frac{\sqrt{3}}{3} \\
+x_{22}=x(\xi_{22})=x(\frac{\sqrt{3}}{3})=1+\frac{\sqrt{3}}{3} \\
+I_3=\frac{5}{9}e^{x_{13}}+\frac{8}{9}e^{x_{23}}+\frac{5}{9}e^{x_{33}} \\
+x_{13}=x(\xi_{13})=x(-\frac{\sqrt{15}}{5})=1-\frac{\sqrt{3}}{3} \\
+x_{23}=x(\xi_{23})=x(0)=1 \\
+x_{33}=x(\xi_{33})=x(\frac{\sqrt{15}}{5})=1+\frac{\sqrt{3}}{3} \\
+(\frac{2}{3})^p=\frac{I_3-I}{I_2-I} \\
+p=11.760260701428644 \\
+c=2^p(I_2-I)=-72.66605555433124 \\
+I_4 = I+c4^{-p}=6.389050060151726 \\
+\end{eqnarray*}
+
+\end{document}

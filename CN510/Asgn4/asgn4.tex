@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 0pt
+\parskip 1mm
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+{\Large\bf CN 510 - Principles and Methods of Cognitive and Neural Modeling}
+
+\bigskip
+
+{\large\bf Assignment \# 4}
+\smallskip
+
+{\large\bf John Joseph}
+\end{center}
+
+\bigskip
+{\bf Shunting Networks}
+\bigskip
+
+This assignment asks us to examine equations designed to model comptetitive networks of $n$ neurons as they approach equilibrium. We are given the following equations:
+
+\begin{equation}
+  \frac{dx_i}{dt} = -Ax_i+BI_i - \sum\limits_{j \neq i}^n I_j
+\end{equation}
+
+\begin{equation}
+  \frac{dx_i}{dt} = -Ax_i+(B-x_i)I_i - x_i\sum\limits_{j \neq i}^n I_j
+\end{equation}
+
+\begin{equation}
+  \frac{dx_i}{dt} = -Ax_i+(B-x_i)\sum\limits_{k \in D}D_{ki}I_k - (C+x_i)\sum\limits_{l\in E}E_{li}I_l
+\end{equation}
+
+\end{document}

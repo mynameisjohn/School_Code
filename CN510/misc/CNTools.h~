@@ -1,0 +1,26 @@
+//The data Type used for simulation
+typedef float T;
+
+//Neuron Struct
+struct Neuron{
+  // array of spike times
+  int spikeTrain[NSPIKE];
+  int index;
+  T weight;
+};
+
+//Maximum of two values
+T max (T a, T b)
+  {return (a<b) ? b : a;}
+
+// Rotter-Diessmann integration
+T solveRD (T x0, T a, T b)
+{
+  return x0*exp(-a*DT)+b;
+}
+
+// Euler Advance
+T eulerAdvance(T x0, T v, T dt)
+{
+  return x0 + dt * v;
+}

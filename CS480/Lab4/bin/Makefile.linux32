@@ -1,0 +1,14 @@
+JAVA_FILES = PA3.java  Quaternion.java SolidCylinder.java Coord.java Vivarium.java Tank.java Teapot.java
+
+# Linux Version
+CLASSPATH=.:/home/grad2/tian/lib/jogl-1.1.0-linux-i586/lib/jogl.jar:/home/grad2/tian/lib/jogl-1.1.0-linux-i586/lib/gluegen-rt.jar
+LIBPATH=/home/grad2/tian/lib/jogl-1.1.0-linux-i586/lib/
+
+all :
+	javac -classpath $(CLASSPATH) $(JAVA_FILES)
+
+clean :
+	rm -f *.class typescript
+
+run :
+	java -classpath $(CLASSPATH) -Djava.library.path=$(LIBPATH) PA3

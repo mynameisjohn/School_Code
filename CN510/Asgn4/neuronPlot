@@ -1,0 +1,36 @@
+set xlabel "Neuron (1-100)";
+set ylabel "Equilibrium Potential (mV)";
+unset key;
+set term post eps color solid;
+
+set out "./data/figures/1.eps"
+set title "Configuration 1";
+plot "./data/64/dat1.out" with lines, "./data/64/dat1.out" lc rgb 'blue';
+
+set out "./data/figures/2.eps"
+set title "Configuration 2";
+plot "./data/64/dat2.out" with lines, "./data/64/dat2.out" lc rgb 'blue';
+
+set out "./data/figures/3.eps"
+set title "Configuration 3";
+plot "./data/64/dat3.out" with lines, "./data/64/dat3.out" lc rgb 'blue';
+
+set out "./data/figures/4.eps"
+set title "Configuration 4";
+plot "./data/64/dat4.out" with lines, "./data/64/dat4.out" lc rgb 'blue';
+
+set out "./data/figures/5.eps"
+set title "Configuration 5";
+plot "./data/64/dat5.out" with lines, "./data/64/dat5.out" lc rgb 'blue';
+
+set out "./data/figures/6.eps"
+set title "Configuration 6";
+plot "./data/64/dat6.out" with lines, "./data/64/dat6.out" lc rgb 'blue';
+
+set out "./data/figures/7.eps"
+set title "Configuration 7";
+plot "./data/64/dat7.out" with lines, "./data/64/dat7.out" lc rgb 'blue';
+
+set out "./data/figures/8.eps"
+set title "Configuration 8";
+plot "./data/64/dat8.out" with lines, "./data/64/dat8.out" lc rgb 'blue';

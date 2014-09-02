@@ -1,0 +1,8 @@
+set xlabel "Time (s)";
+set ylabel "Intensity";
+set term post eps color solid;
+set yrange [0:1];
+set key top right;
+set out "./data/figures/linearTime.eps";
+set title "Linear Signal Function";
+plot "./data/64/datT.out" with lines title "N1 (I=0.2)", "./data/64/datT.out" using 1:3 with lines title "N2 (I=0.7)","./data/64/datT.out" using 1:4 with lines title "N3 (I=0.9)","./data/64/datT.out" using 1:5 with lines title "N4 (I=0.6)","./data/64/datT.out" using 1:6 with lines title "N5 (I=0.3)","./data/64/datT.out" using 1:7 with lines title "N6 (I=0.5)","./data/64/datT.out" using 1:8 with lines title "N7 (I=0.4)","./data/64/datT.out" using 1:9 with lines title "N8 (I=0.8)","./data/64/datT.out" using 1:10 with lines title "N9 (I=0.5)","./data/64/datT.out" using 1:11 with lines title "N10 (I=0.1)";

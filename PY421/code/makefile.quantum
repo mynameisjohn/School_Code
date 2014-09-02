@@ -1,0 +1,33 @@
+.KEEP_STATE:    
+.SUFFIXES: .o .f90 .c
+
+FLAGS = -O3 
+
+F90 = gfortran
+CC = cc
+
+IPATH=
+LPATH= -L/usr/X11R6/lib/ 
+GLUTLIB= -lglut -lGLU -lGL -lXmu -lXext -lX11
+#GLIB = -laux -lGL -lX11
+#MLIB = -lcomplib.sgimath
+FLIB = -L/opt/intel_fc_80/lib -limf -lifcore -lcprts -lcxa -lunwind \
+-lifcoremt -lifport
+
+.f90.o: 
+	$(F90) -c $(FLAGS) $*.f90
+.c.o:
+	$(CC) -c $(FLAGS) $(IPATH) $*.c
+
+quantum: quantum.o quantumsub.o quantummod.o rand48.o 
+	$(F90) -o quantum quantum.o quantumsub.o quantummod.o rand48.o \
+	$(FLAGS) $(MLIB) $(LPATH) $(GLUTLIB)
+
+quantum.o: quantum.c
+
+quantummod.o: quantummod.f90
+
+quantumsub.o: quantummod.o quantumsub.f90
+
+rand48.o : rand48.c
+

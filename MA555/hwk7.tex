@@ -1,0 +1,212 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 0pt
+\parskip 1mm
+\usepackage{amsmath}
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+
+{\Large\bf MA 555 - Numerical Analysis}
+
+\bigskip
+
+{\large\bf Assignment \# 6}
+\smallskip
+
+{\large\bf John Joseph}
+\end{center}
+
+{\bf Problem 1}
+\smallskip
+
+We aim to numerically solve the IVP $yy'=1$, $y(0)=1$ using three methods. 
+\smallskip
+
+Euler Explicit
+
+\begin{eqnarray*}
+yy'=1 \\
+y'=\frac{1}{y} \\
+y_1=y_0+(\frac{1}{y_0}) \tau=1+\tau
+\end{eqnarray*}
+
+Euler Implicit
+
+\begin{eqnarray*}
+y_1=y_0+(\frac{1}{y_1}) \tau=\frac{\tau}{1+\tau}
+\end{eqnarray*}
+
+Predictor-Corrector
+
+\begin{eqnarray*}
+k_1=\frac{1}{y_0} \\
+k_2=\frac{1}{y_0+k_1 \tau} \\
+y_1=y_0+\frac{tau}{2}(1+\frac{1}{1+\tau}) = 1+\frac{2 \tau+\tau^2}{2(1+\tau)}
+\end{eqnarray*}
+
+{\bf Problem 2}
+\smallskip
+
+Applying one iteration of Euler Explicit to the given system, $\tau=0.1$, gives
+
+\begin{eqnarray*}
+y_1=y_0+y'\tau \\
+ y_1=\begin{bmatrix}
+	1 \\
+	0 
+	\end{bmatrix}+\tau
+	\begin{bmatrix}
+	2 & -1  \\[0.2em]
+	1 & -1  \\[0.2em]
+     \end{bmatrix}
+\begin{bmatrix}
+	1 \\
+	0 
+	\end{bmatrix} \\
+y_1=\begin{bmatrix}
+	0.8 \\
+	0.1 
+	\end{bmatrix}
+\end{eqnarray*}
+
+{\bf Problem  3}
+\smallskip
+
+Solving the second order system using Euler Explicit. $y''=-y$, $y(0)=1$, $y'(0)=0$ goes as follows. 
+
+\begin{eqnarray*}
+y_1=y_0+y'\tau \\
+ y_1=\begin{bmatrix}
+	1 \\
+	0 
+	\end{bmatrix}+\tau
+	\begin{bmatrix}
+	0 & 1  \\[0.2em]
+	-1 & 0  \\[0.2em]
+     \end{bmatrix}
+\begin{bmatrix}
+	1 \\
+	0 
+	\end{bmatrix} 
+\end{eqnarray*} 
+
+We can analyze its stability by looking at the eigenvalues of the matrix representing the differential equation. 
+
+\begin{equation*}
+\Big{|}
+\begin{bmatrix}
+-\lambda & 1  \\
+-1 & -\lambda  
+\end{bmatrix}
+\Big{|}=0
+\bigskip
+\end{equation*}
+
+From which we see $\lambda= \pm i$. The solution to this system goes as $|1- \lambda \tau |$. 
+
+\begin{equation*}
+|1-\lambda \tau|=\sqrt{1+\tau^2}>1
+\end{equation*}
+
+Which implies instability. 
+\bigskip
+
+{\bf Problem  4}
+\smallskip
+
+I'm not entirely sure how to do this problem, but here is my best guess. For the IVP $y'=-y$, $y(0)=1$ we are given $2 \alpha_0+\alpha_1=1$. We can write this system as a matrix
+
+\begin{equation*}
+y'_1=\tau  
+\begin{bmatrix}
+	\alpha_0 & 0 & 0  \\[0.2em]
+	0 & \alpha_1 & 0  \\[0.2em]
+	0 & 0 &\alpha_ 0  \\[0.2em]
+\end{bmatrix}
+\begin{bmatrix}
+y_0 \\
+y_1 \\
+y_2 
+\end{bmatrix}
+\end{equation*}
+
+The eigenvalues of this matrix are $\lambda_1=\alpha_1$, $\lambda_{2,3}=\alpha_0$. If it's still true that $|1-\lambda \tau|<1$, then We must restrict $\alpha$ (since no restriction on $\tau$ is imposed). From this we see that $\alpha$ must be less than 1 but greater than 0. 
+\bigskip
+
+{\bf Problem  5}
+\smallskip
+
+We apply the classical RK method to the IVP $y'=-\lambda y$, the solution of which is actually $y(t)=e^{-\lambda t}$. After much algebra we can see that using the RK4 method gets us
+
+\begin{equation*}
+y_1=y_0-\lambda \tau + \frac{1}{2} \tau^2 \lambda ^2 - \frac{1}{6} \tau^3 \lambda ^3 + \frac{1}{24} \tau^4 \lambda ^4
+\end{equation*}
+
+Which is the Taylor series of the actual solution up to the fourth term. In terms of stability the linear term dominates, meaning 
+
+\begin{equation*}
+|y_0-\lambda \tau| < 1
+\end{equation*}
+
+Since $y_0=1$, $\lambda \tau < 2$ for stability (assuming both are $>$ 0). In other words, $\tau<\frac{2}{\lambda}$. 
+\bigskip
+
+{\bf Problem 6}
+\smallskip
+
+We apply the explicit predictor-corrector method to the IVP $y'=-\lambda y$, the solution of which is $y(t)=e^{-\lambda t}$. 
+
+\begin{eqnarray*}
+y_1=y_0+\tau(\alpha y_0'+\beta(\tau y_0''+\frac{1}{2}\tau^2 y_0''')) \\
+y_1=y_0+\tau \alpha y_0'+\tau \beta(\tau y_0''+\frac{1}{2} \tau^2 y_0''') \\
+y_1=y_0+\tau \alpha y_0'+\tau^2 \beta y_0'' + \frac{1}{2} \tau^3 y_0'''
+\end{eqnarray*}
+
+From matching the Taylor series we can see that $\alpha=-1$, $\beta=\frac{1}{2}$, although we can never eliminate the third term (unless I've made an error.) Again, the linear term governs stability. 
+
+\begin{equation*}
+|y_0-\lambda \tau| < 1
+\end{equation*}
+
+Since $y_0=1$, $\lambda \tau < 2$ for stability (assuming both are $>$ 0). In other words, $\tau<\frac{2}{\lambda}$, making the stability conditional. 
+\bigskip
+
+{\bf Problem 7}
+\smallskip
+
+We attempt to approximate the IVP $y'=-y$ with a multistep method, the characteristic equation for which is 
+
+\begin{equation*}
+z^2+2\tau z-y_0=0
+\end{equation*}
+
+Solving for $z$, we see that 
+
+\begin{eqnarray*}
+z=\frac{-2\tau \pm \sqrt{4(\tau^2+1)}}{2} \\
+z=-\tau \pm \sqrt{\tau^2+1}
+\end{eqnarray*}
+
+In order for this to be stable, $|z|<1$. It is clear that this is impossible because $|-\tau-\sqrt{\tau^2+1}|>1$ for any $\tau$. Therefore this approximation is not stable. 
+\bigskip
+
+{\bf Problem 8}
+
+In approximating $y''=-y$, we will use a solution whose characteristic equation is 
+
+\begin{equation*}
+z^2+(\tau-2)z+1=0
+\end{equation*}
+
+Solving for $z$, we see that 
+
+\begin{eqnarray*}
+z=\frac{2-\tau^2 \pm \sqrt{(\tau^2-2)^2-4y_0}}{2}
+\end{eqnarray*}
+
+In order for this to be stable, the discriminant $(\tau^2-2)^2-4y_0$ must be negative (make $z$ complex). In order for that to happen, $0 < \tau < 2$. 
+
+
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 0pt
+\parskip 1mm
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+{\Large\bf CN 510 - Principles and Methods of Cognitive and Neural Modeling}
+
+\bigskip
+
+{\large\bf Assignment \# 2}
+\smallskip
+
+{\large\bf John Joseph}
+\end{center}
+
+\bigskip
+{\bf Part 1 : Handmade Euler Numerical Integration}
+\smallskip
+
+Part 1 of this assignment asks us to numerically simulate the Leaky Integrator model of the neuron using the Euler Method. I must come clean, here - in the previous assignment I included an Euler simulation, as well as another simulation using the Runge-Kutta 4 method, with the intent of impressing the instructor. I had no idea we'd be doing it for this assignment, but as a result I am relying on data generated from Assignment 1 for this part of the assignment. 
+
+\vspace{2mm}
+
+I chose to use the results of the RK4 simulation in this report, since I've been lead to believe they are more accurate. To the grader - if you were expecting Euler and would like to see those results, please let me know. It's no trouble to send a revised version of this report using the Euler method, and I understand that it may be a bother to determine if my results are indeed correct. 
+
+\vspace{2mm}
+
+That being said, I ran the simulation using RK4 and a time step of $\Delta t=0.05$ seconds. The Euler Integration method works by advancing the current state of our variable using its calculated rate of change and an arbitrarily low time step. The RK4 method works by calculating the rate of change at several key points about this time step, generating a weighted average of those rates, and then advancing the current value using the averaged rate as one would in an Euler simulation. This requires more computation, but for an assignment like this it's all pretty negligible. 
+
+\vspace{2mm}
+
+The simulation was run twice for ten seconds each using two different decay rates (labeled as $A$). For each simulation, an input current $I$ was supplied for the first five seconds. As discussed in the previous report, the results of the RK4 solution were at all times equal to those of the Analytic and Rotter-Deissmann solution. 
+
+\vspace{2mm}
+
+With that said, at $t=5$ for the first simulation with $A=1$, these three methods yielded the value $4.966310$; Euler yeilded $4.970397$, for a difference of $0.004087$. Similarly, at $t=10$ the more accurate three yielded $0.31841$while Euler got $0.027972$, for a difference of $0.003869$. 
+
+\vfil\eject
+
+Below you can see the plot of the numerical simuation using RK4. The input current, $I$, was turned on at $t=0$ and on at $t=5$. The Potential in the Leaky Integrator model naturally approaches an equilibrium value $\frac{I}{A}$, and changing $I$ at this time causes this equilibrium value to change
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/part1/figures/rk1,width=14cm,height=7cm}
+\end{center}
+\caption{\label{pict1}Numerical Simulation 1; A=1, I=5(on),0(off)}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/part1/figures/rk2,width=14cm,height=7cm}
+\end{center}
+\caption{\label{pict2}Numerical Simulation 2; A=2, I=5(on),0(off)}
+\end{figure}
+
+\vfil\eject
+
+\end{document}

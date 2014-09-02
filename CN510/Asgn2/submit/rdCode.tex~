@@ -1,0 +1,16 @@
+\begin{document}
+
+\begin{verbatim}
+// Simple conditionals to handle spike/reset
+T solveRD(T x0, T A, T I, T vThresh)
+{
+  if (x0==V_SPIKE)
+    return V_RESET;
+  T ret = (x0-(I/A))*exp(-A*DT)+(I/A);
+  if (ret>vThresh)
+    return V_SPIKE;
+  return ret;
+}
+\end{verbatim}
+
+\end{document}

@@ -1,0 +1,84 @@
+set xlabel "Time (seconds)";
+set ylabel "Voltage (mV)";
+unset key;
+set term post eps color solid;
+
+set out "./data/figures/A.eps";
+set title "Tonic Spiking";
+plot "./data/64/datA.out" with lines, "./data/64/datA.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Phasic Spiking";
+set out "./data/figures/B.eps";
+plot "./data/64/datB.out" with lines, "./data/64/datB.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Tonic Bursting";
+set out "./data/figures/C.eps";
+plot "./data/64/datC.out" with lines, "./data/64/datC.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Phasic Bursting";
+set out "./data/figures/D.eps";
+plot "./data/64/datD.out" with lines, "./data/64/datD.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Mixed Mode";
+set out "./data/figures/E.eps";
+plot "./data/64/datE.out" with lines, "./data/64/datE.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Spike Frequency Adaptation";
+set out "./data/figures/F.eps";
+plot "./data/64/datF.out" with lines, "./data/64/datF.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Class 1 Excitability";
+set out "./data/figures/G.eps";
+plot "./data/64/datG.out" with lines, "./data/64/datG.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Class 2 Excitability";
+set out "./data/figures/H.eps";
+plot "./data/64/datH.out" with lines, "./data/64/datH.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Spike Latency";
+set out "./data/figures/I.eps";
+plot "./data/64/datI.out" with lines, "./data/64/datI.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Sub-Threshold Oscillations";
+set out "./data/figures/J.eps";
+plot "./data/64/datJ.out" using 1:3 with lines, "./data/64/datJ.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Resonator";
+set out "./data/figures/K.eps";
+plot "./data/64/datK.out" using 1:3 with lines, "./data/64/datK.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Integrator";
+set out "./data/figures/L.eps";
+plot "./data/64/datL.out" using 1:3 with lines, "./data/64/datL.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Rebound Spike";
+set out "./data/figures/M.eps";
+plot "./data/64/datM.out" using 1:3 with lines, "./data/64/datM.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Rebound Burst";
+set out "./data/figures/N.eps";
+plot "./data/64/datN.out" using 1:2 with lines, "./data/64/datN.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Threshold Variability";
+set out "./data/figures/O.eps";
+plot "./data/64/datO.out" using 1:3 with lines, "./data/64/datO.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Bistability";
+set out "./data/figures/P.eps";
+plot "./data/64/datP.out" with lines, "./data/64/datP.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Depolarizing After-Potential";
+set out "./data/figures/Q.eps";
+plot "./data/64/datQ.out" with lines, "./data/64/datQ.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Accommodation";
+set out "./data/figures/R.eps";
+plot "./data/64/datR.out" using 1:3 with lines, "./data/64/datR.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Inhibition Induced Spiking";
+set out "./data/figures/S.eps";
+plot "./data/64/datS.out" with lines, "./data/64/datS.out" using 1:7 with lines lc rgb 'blue' lt 3;
+
+set title "Inhibition Induced Bursting";
+set out "./data/figures/T.eps";
+plot "./data/64/datT.out" with lines, "./data/64/datT.out" using 1:7 with lines lc rgb 'blue' lt 3;

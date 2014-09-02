@@ -1,0 +1,4 @@
+To use the values of pi and 2*pi in a fortran program, cut and paste
+the following line under the the IMPLICIT NONE statement:
+
+REAL(8), PARAMETER :: PI=3.141592653589793_8, TWOPI=6.283185307179586_8

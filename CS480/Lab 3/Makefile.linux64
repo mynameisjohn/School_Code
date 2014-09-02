@@ -1,0 +1,14 @@
+JAVA_FILES = Lab3.java  Hand.java  Quaternion.java BitmapLoader.java TextureReader.java ResourceRetriever.java
+
+# Linux Version
+CLASSPATH=.:/home/grad2/tian/lib/jogl-1.1.0-linux-amd64/lib/jogl.jar:/home/grad2/tian/lib/jogl-1.1.0-linux-amd64/lib/gluegen-rt.jar
+LIBPATH=/home/grad2/tian/lib/jogl-1.1.0-linux-amd64/lib/
+
+all :
+	javac -classpath $(CLASSPATH) $(JAVA_FILES)
+
+clean :
+	rm -f *.class typescript
+
+run :
+	java -classpath $(CLASSPATH) -Djava.library.path=$(LIBPATH) Lab3 

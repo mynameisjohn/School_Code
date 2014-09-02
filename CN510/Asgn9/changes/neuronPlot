@@ -1,0 +1,10 @@
+plot "data/32/dat.out" using 1:6 with lines;
+replot "data/32/dat.out" using 1:9 with lines;
+replot "data/32/dat.out" using 1:12 with lines;
+replot "data/32/dat.out" using 1:15 with lines;
+replot "data/32/dat.out" using 1:18 with lines;
+replot "data/32/dat.out" using 1:21 with lines;
+replot "data/32/dat.out" using 1:24 with lines;
+replot "data/32/dat.out" using 1:27 with lines;
+replot "data/32/dat.out" using 1:30 with lines;
+replot "data/32/dat.out" using 1:33 with lines;

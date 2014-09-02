@@ -1,0 +1,560 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 0pt
+\parskip 1mm
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+{\Large\bf CN 510 - Principles and Methods of Cognitive and Neural Modeling}
+
+\bigskip
+
+{\large\bf Assignment \# 3}
+\smallskip
+
+{\large\bf John Joseph}
+\end{center}
+
+\bigskip
+{\bf Replicating the Izhikevich Neuron}
+\bigskip
+
+This assignment asks us to replicate twenty differnet firing patters using the Izhikevich model of the Neuron. The neuron potential is modelled using a differential equation that evolves two variables, $V$ and $u$, with time. 
+
+\begin{equation}
+\frac{dV}{dt} = 0.04V^{2}+5V+140-u+I
+\end{equation}
+\begin{equation}
+\frac{du}{dt} = a(bV-u)
+\end{equation}
+
+The equation is controlled by parameters $I$ (our input current), $a$, and $b$, as well as the initial conditions $V_{0}$ and $u_{0}$. Additionally, there are two further parameters $c$ and $d$ that manage the spiking conditions once our potential crosses a certain threshold. 
+
+\vspace{2mm}
+
+This brings the number of parameters left to the user up to 8 ($I, a, b, c, d, V_{0}$, $u_{0}, V_{spike}$). Adjusting these parameters causes the model to exhibit several different firing patterns. This report will demonstrate my attempts at recreating twenty firing patterns outlined by Izhikevich. This was accompished with varying degrees of success, and the final results seem to reflect two things: the sensitivity and complexity of this model, and my inexperience as a programmer. 
+
+\vspace{2mm}
+
+The simulations were run twice for 200 seconds each using a time step of 1 second and a time step of 0.1 second. My general strategy was to use the input settings provided in the Assignment and, when I found the output to be significantly different from the output produced by Izhikevich, toyed with the parameters until I felt I could do no more. I couldn't find too many reliable sources as to the current specifications for a few of the patterns, though I did my best to guess. I also read osome of Izhikevich's papers regarding his neural model to learn more about its behaviour and what to expect. 
+
+\vspace{2mm}
+
+Each firing pattern will be given a page in this report, in which I will provide a plot of its output and a short description of my process in creating it. 
+
+\vfil\eject
+
+{\bf Results}
+
+\vspace{2mm}
+
+{\bf Tonic Spiking}
+\bigskip
+
+The first pattern is the Tonic Spiking pattern, characterized by a constant spiking period following the application of an input current, set to a constant 14 (amps, presumably) starting at 10s. 
+\vspace{2mm}
+
+The implementation of this pattern was extremely straightforward, and the Izhikevich equations were solved using $a=0.02, b=0.2, c=-65, d=6, I=14$. For future reference the $c$ value means the voltage will reset to $c$ once it has passed our $vSpike$ value, which was set to 30 in all cases. Similarly, $u$ will be reset to $d$ post spike.
+
+\vspace{2mm}
+
+The initial values of the problem in this case were $V=_{0}=-70, u_{0}=-20$.  
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/A,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict1}Tonic Spiking Voltage, with $I$ in blue}
+\end{figure}
+
+Though I can't really account for spike amplitude, I will say that this plot does seem to follow Izhikevich's quite well; note the constant spiking period the neuron converges to following the application of I. 
+
+\vfil\eject
+
+{\bf Phasic Spiking}
+\bigskip
+
+The second pattern is Phasic Spiking, meaning we get a quick spike followed by a period of inactivity. The equations were solved using $a=0.02, b=0.25, c=-65, d=6, I=0.5$. The initial values of the problem in this case were $V=_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/B,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict2}Phasic Spiking Voltage, with $I$ in blue}
+\end{figure}
+
+Note the relatively small application of current; this is perhaps the biggest differentiator between the phasic and tonic modes, and it seems to me that this input current is not sufficient to send the neuron into a constant spiking state. 
+
+\vfil\eject
+
+
+{\bf Tonic Bursting}
+\bigskip
+
+We now simulate Tonic Bursting, which is similar to Tonic Spiking in that it maintains a constant period, but differs in its rapid bursts of spikes rather than constant single spikes.
+
+\vspace{2mm}
+
+Parameters: $a=0.02, b=0.2, c=-50, d=2, I=15, $
+
+\vspace{1mm}
+
+$V=_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/C,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict3}Tonic Bursting Voltage, with $I$ in blue}
+\end{figure}
+
+It is here that I should point out the initial weirdness I got in most of my tests; at t=0 I often got some strange spiking behavior. I could negate this by changing the initial conditions, though in some cases (like this one) I couldn't quite shake it. 
+
+\vfil\eject
+
+{\bf Phasic Bursting}
+\bigskip
+
+The Phasic Bursting pattern is similar to the Phasic spiking, save for a rapid succession of spikes rather than just one. Implementation was very straightforward, and I did not run into any sort of issues for this pattern
+
+\vspace{2mm}
+
+Parameters: $a=0.02, b=0.25, c=-55, d=0.05, I=0.6, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/D,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict4}Phasic Bursting Voltage, with $I$ in blue}
+\end{figure}
+
+One thing I couldn't quite seem to lock down was the localization of the spikes; I had wanted a pattern in which the bursts were in much more rapid succession. My thinking was to vary $u$, which did work to a degree. 
+
+\vfil\eject
+
+{\bf Mixed Mode}
+\bigskip
+
+Part 5 asked us to simulate a neuron firing in a Mixed Mode pattern. In general, a Mixed Mode oscillation is a pattern that exhibits oscillations shifting between faster and slower periods and differing amplitudes.
+
+\vspace{2mm}
+
+Looking at the output, I do think that it is very close to what Izhikevich obtained. However, I don't really see a mixed mode pattern in either of our outputs, unless we are considering the initial bursts to have shifted to the slower spiking state it eventually reaches. 
+\vspace{2mm} 
+
+Parameters: $a=0.02, b=0.2, c=-55, d=4, I=10, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/E,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict5}Mixed Mode, with $I$ in blue}
+\end{figure}
+
+I mentioned before that I usually got some during the very early stages of my simulation, so I wasn't sure if that initial burst was due to error on my part or the accuracy of the simulation.
+
+$http://math.bu.edu/people/tasso/Chaos_18_015101.pdf$
+
+\vfil\eject
+
+{\bf Spike Frequency Adaptation}
+\bigskip
+
+The next firing pattern was called Spike Frequency Adaptation. An article I found by Wilanowski and Piotrkiewicz defines the pattern as the decline in firing rate of a neuron in response to a constant current input; in other words, the application of a relatively large current capable of generating wild spiking patterns is depolarized to the point where a constant series of spikes are produced. 
+
+\vspace{2mm}
+
+Looking at the output, I do think that it is very close to what Izhikevich obtained. However, I don't really see a mixed mode pattern in either of our outputs, unless we are considering the initial bursts to have shifted to the slower spiking state it eventually reaches. 
+\vspace{2mm} 
+
+Parameters: $a=0.01, b=0.2, c=-65, d=8, I=30, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/F,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict6}Spike Frequency Adaptation, with $I$ in blue}
+\end{figure}
+
+To me, this looks like the output of the Mixed Mode oscillation. However, front he current overlay you can see that a much larger current has been applied, meaning the neuron was able to stabilize itself and produce a neat spiking pattern.
+
+\begin{verbatim}
+http://www.frontiersin.org/Cellular_Neuroscience/
+10.3389/fncel.2012.00050/full$
+\end{verbatim}
+
+\vfil\eject
+
+{\bf Class 1 Excitability}
+\bigskip
+
+It is here that I began to run into some hiccups in my simulations. Class 1 excitability is defined by Izhikevich to be an input-dependent spiking mode, meaning the spiking frequency scales directly with the amount of input current being applied. 
+
+\vspace{2mm} 
+
+With sufficient applications of current, one does see the firing rate increase the amount of current applied goes up. The slope of that line is 0.5, meaning it's value at $t=100$ is 50 amps. Tests with slopes greater than 1 were carried out, and an increase in firing rate was observed. 
+
+Parameters: $a=0.02, b=-0.1, c=-55, d=6, I=0.5t, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=0$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/G,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict7}Class 1 Excitability, with $I$ in blue}
+\end{figure}
+
+DO SOMETHING REGARDING SPIKING RATE HERE
+
+\vfil\eject
+
+{\bf Class 2 Excitability}
+\bigskip
+
+As opposed to the input-dependent frequency of Class 1 excitable neurons, Class 3 neurons should exhibit a constant spiking frequency regardless of the applied voltage. 
+
+\vspace{2mm}
+
+However, in my actual plot of the data I found this system to be very sensitive to input currents; the amount of current $I$ eventually applied in this model was significantly lower than the current applied to the Class 1 neuron, and yet the spiking frequency was quick to blow up. It was tough to say whether or not the actual rate increased during the 200 second run, but the fact remains that the spike period was dramatically lower once the current was increased. 
+ 
+\vspace{2mm} 
+
+Parameters: $a=0.2, b=0.26, c=-65, d=0, I=0.05t, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=0$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/H,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict8}Class 2 Excitability, with $I$ in blue}
+\end{figure}
+
+SAY MORE HERE
+
+\vfil\eject
+
+{\bf Spike Latency}
+\bigskip
+
+The spike latency pattern is characterized by a single spike, preceded by a short delay following the application of an input current. 
+
+\vspace{2mm}
+
+Though it is small, there is an apparent ``slowing down'' of the voltage spike just before it hits its peak voltage. This effect appears more pronounced in Izhikevich's diagram, though that could have been fore demonstrational purposes. 
+ 
+\vspace{2mm} 
+
+Parameters: $a=0.05, b=0.26, c=-60, d=0, I=2, $
+
+\vspace{1mm}
+
+$V_{0}=-25, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/I,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict9}Spike Latency, with $I$ in blue}
+\end{figure}
+
+SAY MORE HERE
+
+\vfil\eject
+
+{\bf Sub-Threshold Oscillations}
+\bigskip
+
+This firing pattern is characterized by the genration of a small oscillation in the voltage pattern, one not strong enough to generate a spike and reset but still strong enough to be evident. 
+
+\vspace{2mm}
+
+For the record, I chose to plot this data using my Runge-Kutta data; this was very rare for me, but in this case I thought the oscillations looked a bit smoother using this method rather than Euler. The Euler plot was very similar, save for some sharp and short oscillations at the beginning before the first spike. 
+
+\vspace{2mm} 
+
+Parameters: $a=0.05, b=0.26, c=-60, d=0, I=2, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/J,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict10}Sub-Threshold Oscillations, with $I$ in blue}
+\end{figure}
+
+It should be noted that I changed the range of y values for this plot in order to better see the small oscillations. I also shifted the current line down by 63, so it would be visible with the plot of the voltage. 
+
+\vfil\eject
+
+{\bf Resonator}
+\bigskip
+
+The resonator pattern is characterized by generating oscillations of significantly greater amplitudes at certain frequencies, called resonant frequencies. These frequencies are, for out purposes, generated by input currents. 
+
+\vspace{2mm}
+
+Parameters: $a=0.1, b=0.26, c=-60, d=-1, I=2, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/K,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict11}Resonator, with $I$ in blue}
+\end{figure}
+
+Notice that the neuron does not spike during the first two stimulations, but does spike due to the second. The changes in timing are responsible for this, and by stimulating the neuron the right way we get an output that is (fairly) indicative of a resonator. I wouldn't say it is perfect; I chose to simulate this neuron using RK4 to smooth out the output, though similar results were achieved with Euler. 
+
+\vspace{2mm}
+
+I apologize again for the strange behavior during the early stages; I experimented with several initial conditions and was not able to make those initial spikes go away. I hope to have this issue resolved by the next assignment. 
+
+\vfil\eject
+
+{\bf Integrator}
+\bigskip
+
+An integrator pattern is named as such because of it's similarity to the mathematical integration operation; the amount of voltage generated should go up as more current is applied, meaning that for this pattern
+
+\vspace{2mm}
+
+However, we have to take into consideration things like the decay rate, which will prevent our circuit from taking in all the current it gets and generating a massive voltage as time goes on. This is evident in the plot below. 
+\vspace{2mm} 
+
+Parameters: $a=0.02, b=-0.1, c=-55, d=6, I=15, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=-18.5$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/L,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict12}Integrator, with $I$ in blue}
+\end{figure}
+
+There are some differences between my plot and the plot in Izhikevich's paper, and I actually think my data is largely due to the error I had mentioned during the simulation's early stages. They way the integrator should behave, to my understanding, is that successive applications of input current, given little time to decay, will have integrated suffient voltage to generate a spike, hence the absence of a spike after the two input applications toward the end. 
+
+\vfil\eject
+
+{\bf Rebound Spike}
+\bigskip
+
+The rebound spike is characterized by the application of a negative input current, which causes the neuron to spike once the current returns to ground. 
+ 
+\vspace{2mm} 
+
+Parameters: $a=0.03, b=0.25, c=-60, d=4, I=-80, $
+
+\vspace{1mm}
+
+$V_{0}=-90, u_{0}=20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/M,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict13}Rebound Spike, with $I$ in blue}
+\end{figure}
+
+It took some admitted massaging to get the above plot, which is graphed using the Runge-Kutta method. I also lowered the starting voltage to -90 mV, as outlined by Izhikevich in his paper (see reference below). My reason for using RK4 were purely to replicate his graph; if you look at the next section, I go back to Euler to get the Rebound Burst potential working. The complexity of these systems must account in some way for their strange numerical dynamics, though to say I did anything more than guess and check with the methods would be a lie. 
+
+\begin{verbatim}
+http://bme2.aut.ac.ir/~towhidkhah/MotorControl/Resources/Gifani/article/Simple%20Model%20of%20Spiking%20Neurons.pdf$
+\end{verbatim}
+
+\vfil\eject
+
+{\bf Rebound Burst}
+\bigskip
+
+Like the rebound spike, the rebound burst is characterized by a period of activity followed by a return from negative to neutral current. 
+ 
+\vspace{2mm} 
+
+Parameters: $a=0.02, b=0.25, c=-52, d=2, I=-80, $
+
+\vspace{1mm}
+
+$V_{0}=-90, u_{0}=20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/N,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict14}Rebound Burst, with $I$ in blue}
+\end{figure}
+
+I think this is a pretty good result, though as I mentioned I went back from using RK4 to using Euler to get it. This was all for the sake of accuracy, but other than the simulation method the parameters were the same as for the Rebound Spike. Note that I also decreased the current significantly, and changed the initial $u$ value to a positive number. The rebound would not occur for current values lower than around -70, but my change in $u$ seemed to have little effect. 
+
+\vfil\eject
+
+{\bf Threshold Variability}
+\bigskip
+
+The threshold variability potential seems to be characterized by the conditions under which a spike is generated. Hence the term threshold variability, meaning the spiking threshold changes depending on how the input current is applied.  
+ 
+\vspace{2mm} 
+
+Parameters: $a=0.02, b=0.25, c=-50, d=2, I=15, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/O,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict15}Threshold Variability, with $I$ in blue}
+\end{figure}
+
+My threshold variability graph is, in my opinion, quite similar to that of Izhikevich's. There is again the issue of smoothness; it seems to me that the increases and decreases in voltage are quite sharp, far sharper than anything Izhikevich ever produces. Still, I am satisified with the outcome, and at the end of the day the spiking pattern should produce the desired results. 
+
+\vfil\eject
+
+{\bf Bistability}
+\bigskip
+
+The threshold variability potential seems to be characterized by the conditions under which a spike is generated. Hence the term threshold variability, meaning the spiking threshold changes depending on how the input current is applied.  
+ 
+\vspace{2mm} 
+
+Parameters: $a=0.02, b=0.25, c=-50, d=2, I=15, $
+
+\vspace{1mm}
+
+$V_{0}=-70, u_{0}=-20$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/P,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict16}Bistability, with $I$ in blue}
+\end{figure}
+
+My threshold variability graph is, in my opinion, quite similar to that of Izhikevich's. There is again the issue of smoothness; it seems to me that the increases and decreases in voltage are quite sharp, far sharper than anything Izhikevich ever produces. Still, I am satisified with the outcome, and at the end of the day the spiking pattern should produce the desired results. 
+
+\vfil\eject
+
+{\bf Depolarizing After-Potential}
+\bigskip
+
+The depolarizing after potential pattern is characterized by a slight potential increase that occurs after a spike. This potential depolarizes the neuron and brings it out of its spiking state and back to neutrality.  
+
+\vspace{2mm} 
+
+Parameters: $a=1, b=0.2, c=-60, d=-21, I=10, $
+
+\vspace{1mm}
+
+$V_{0}=-80, u_{0}=10$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/Q,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict17}Depolarizing After-Potential, with $I$ in blue}
+\end{figure}
+
+As you can see, my after-potential is not quite as smooth as Izhikevich's. I'm not sure what the cause for this is, and as I mentioned earlier I had some trouble managing the specific dynamics of my spikes. However, the after-potential seems to do a nice job of depolarizing the neuron, and after it occurs the voltage soon levels off to -80 mV. 
+
+\vfil\eject
+
+{\bf Accomodation}
+\bigskip
+
+The depolarizing after potential pattern is characterized by a slight potential increase that occurs after a spike. This potential depolarizes the neuron and brings it out of its spiking state and back to neutrality.  
+
+\vspace{2mm} 
+
+Parameters: $a=1, b=0.2, c=-60, d=-21, I=10, $
+
+\vspace{1mm}
+
+$V_{0}=-80, u_{0}=10$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/R,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict18}Accommodation, with $I$ in blue}
+\end{figure}
+
+As you can see, my after-potential is not quite as smooth as Izhikevich's. I'm not sure what the cause for this is, and as I mentioned earlier I had some trouble managing the specific dynamics of my spikes. However, the after-potential seems to do a nice job of depolarizing the neuron, and after it occurs the voltage soon levels off to -80 mV. 
+
+\vfil\eject
+
+{\bf Inhibition Induced Spiking}
+\bigskip
+
+The depolarizing after potential pattern is characterized by a slight potential increase that occurs after a spike. This potential depolarizes the neuron and brings it out of its spiking state and back to neutrality.  
+
+\vspace{2mm} 
+
+Parameters: $a=1, b=0.2, c=-60, d=-21, I=10, $
+
+\vspace{1mm}
+
+$V_{0}=-80, u_{0}=10$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/S,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict19}Inhibition Induced Spiking, with $I$ in blue}
+\end{figure}
+
+As you can see, my after-potential is not quite as smooth as Izhikevich's. I'm not sure what the cause for this is, and as I mentioned earlier I had some trouble managing the specific dynamics of my spikes. However, the after-potential seems to do a nice job of depolarizing the neuron, and after it occurs the voltage soon levels off to -80 mV. 
+
+\vfil\eject
+
+{\bf Inhibition Induced Bursting}
+\bigskip
+
+The depolarizing after potential pattern is characterized by a slight potential increase that occurs after a spike. This potential depolarizes the neuron and brings it out of its spiking state and back to neutrality.  
+
+\vspace{2mm} 
+
+Parameters: $a=1, b=0.2, c=-60, d=-21, I=10, $
+
+\vspace{1mm}
+
+$V_{0}=-80, u_{0}=10$. 
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=data/figures/T,width=14cm,height=8cm}
+\end{center}
+\caption{\label{pict20}Inhibition Induced Bursting, with $I$ in blue}
+\end{figure}
+
+As you can see, my after-potential is not quite as smooth as Izhikevich's. I'm not sure what the cause for this is, and as I mentioned earlier I had some trouble managing the specific dynamics of my spikes. However, the after-potential seems to do a nice job of depolarizing the neuron, and after it occurs the voltage soon levels off to -80 mV. 
+
+\end{document}

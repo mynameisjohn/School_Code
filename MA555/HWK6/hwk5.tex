@@ -1,0 +1,191 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 0pt
+\parskip 1mm
+\usepackage{amsmath}
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+
+{\Large\bf MA 555 - Numerical Analysis}
+
+\bigskip
+
+{\large\bf Assignment \# 6}
+\smallskip
+
+{\large\bf John Joseph}
+\end{center}
+
+{\bf Problem 1}
+\smallskip
+
+In order to use the mediant bisection, let us denote the lower and upper bounds of our enclosing interval as $\frac{a}{b}$ and $\frac{c}{d}$, respectively. Therefore the mediant $m=\frac{a+c}{b+d}$. We will use this method to find a rational fraction to approximate $\sqrt{2}$ using $\frac{a}{b}=\frac{7}{5}$, $\frac{c}{d}=\frac{17}{12}$. 
+
+\begin{eqnarray*}
+m_1=\frac{7+17}{5+12}=\frac{24}{17}=1.411764 <  \sqrt{2} \\
+\frac{a}{b} \leftarrow \frac{24}{17} \\
+m_2=\frac{24+17}{29+12}=\frac{41}{29}=1.413793 \\
+|\sqrt{2}-1.413793|=0.000420
+\end{eqnarray*}
+
+{\bf Problem 2}
+\smallskip
+
+We will confirm the convergence of an iterative function to a target of $\sqrt{2}$ and find its order of convergence. 
+
+\begin{eqnarray*}
+x_{i+1}=\frac{x_i+2}{x_i+1}\\
+x_0=0 \\
+x_1=2\\
+x_2=\frac{4}{3}\\
+\end{eqnarray*}
+
+To determine the order of convergence we will compare the difference of the first iteration from the exact solution. 
+
+\begin{eqnarray*}
+x_1-\sqrt{2}=\frac{x_i+2}{x_i+1}-\sqrt{2}=\frac{x_0+2-\sqrt{2}(x_0+1)}{x_0+1} \\
+x_1-\sqrt{2}=(x_0-\sqrt{2})(1-\sqrt{2})
+\end{eqnarray*}
+
+The fact that $|1-\sqrt{2}| < 1$ implies the solution converges (each iteration has less error than the last), and the difference term is linear in power. This tells us that the order of convergence is linear. 
+\bigskip
+
+{\bf Problem  3}
+\smallskip
+
+We will use Halley's method to find one of the roots of the function $f(x)=Ax+Bx^2$. We will confirm a root of $x=0$, although there should be another root at $x=-\frac{A}{B}$. Using the methods used in Problem 2 and knowledge of a root at $x=0$, we can do the following:
+
+\begin{eqnarray*}
+x_{i+1}=x_i- \Big{(} \frac{2f'(x_i)}{2f'(x_i)^2-f(x_i)f''(x_i)} \Big{)} f(x_i) \\
+f'(x)=A+2Bx \\
+f''(x)=2B \\
+x_1-0=x_0-\Big{(} \frac{2f'(x_0)}{2f'(x_0)^2-f(x_0)f''(x_0)} \Big{)} f(x_0) -0 \\
+x_1-0=x_0-0-2 \Big{(} \frac{A+2Bx_0}{(A+2Bx_0)^2-(Ax_0+Bx_0^2)(B)} \Big{)}(Ax_0+Bx_0^2) \\
+x_1=x_0^3 \Big{(} \frac{B^2}{A^2+3B^2x_0^2+3ABx_0} \Big{)}
+\end{eqnarray*} 
+
+This shows that the order of convergence is cubic (difference is cubed). As we near the root $x=0$ the difference coefficient goes to $\frac{B^2}{A^2}$. I'm still not sure about the other root, although I assume cubic convergence can be found for it as well. 
+\bigskip
+
+{\bf Problem  4}
+\smallskip
+
+We are asked to find the roots of the function $f(x)=\cos{x}-x$ using the fixed point and Newton-Raphson methods with a starting value of $x_0=0.6$. 
+\smallskip
+
+Fixed Point:
+
+\begin{eqnarray*}
+x=\cos{x} \\
+x_1=\cos{x_0}=0.825335 \\
+x_2=\cos{x_1}=0.678310 \\
+x_3=\cos{x_2}=0.778634 \\
+f(x_3)=-0.066761
+\end{eqnarray*}
+
+Newton Raphson: 
+
+\begin{eqnarray*}
+f'(x)=-\sin{x}-1 \\
+x=x-\frac{f(x)}{f'(x)} \\
+x_1=x_0-\frac{f(x_0)}{f'(x_0)} = 0.744017 \\
+x_2=x_1-\frac{f(x_0)}{f'(x_0)} = 0.739091 \\
+x_3=x_2-\frac{f(x_2)}{f'(x_2)} = 0.739085 \\
+f(x_3) = -1.055212 \times 10^{-11}
+\end{eqnarray*}
+
+It is clear to see that Newton-Raphson is superior. 
+\bigskip
+
+{\bf Problem  5}
+\smallskip
+
+We will fix the variable $m$ in the following modification of the Newton-Raphson method
+
+\begin{equation*}
+x_{i+1}=x_i-m \frac{f(x_i)}{f'(x_i)}
+\end{equation*}
+
+so as to maximize the rate of convergence. As we've seen, the order at which the approximation converges can be obtained by looking at how the error value behaves. For the function $f(x)=a_3x^3+a_4x^4$, the roots of which are $x=0$, $x=-\frac{a_3}{a_4}$, we will check the error for the first root at the first iteration. 
+
+\begin{eqnarray*}
+x_1-0=x_0-0-m \Big{(} \frac{a_3x_0^3+a_4x_0^4}{3a_3x_0^2+4a_4x_0^3} \Big{)} \\
+x_1=\frac{x_0^2(a_3x_0(3-m)+a_4x_0^2(4-m))}{x_0^2(3a_3+4a_4x_0)}  \\
+x_1= \frac{a_3x_0(3-m)+a_4x_0^2(4-m)}{3a_3+4a_4x_0}  \\
+\end{eqnarray*}
+
+In the numerator, we see that the linear $x_0$ term prevents the approximation from converging quadratically. By setting $m=3$ we remove this term and restore quadratic convergence. 
+
+\begin{equation*}
+x_{i+1}=x_i-3 \frac{f(x_i)}{f'(x_i)}
+\end{equation*}
+
+{\bf Problem 6}
+\smallskip
+
+In order to solve a system of equations using the Newton-Raphson method, we will make some changes in notation. $X$ represents the vector $[x,y]^T$, $F=[f(x,y),g(x,y)]^T$. $J$ is the Jacobian matrix, which we will use in place of the derivative $f'$ in the original formula. Therefore, a Newton-Raphson iteration becomes
+
+\begin{equation*}
+X_{i+1}=X_i-J_i^{-1}F_i \\
+\end{equation*}
+
+Solving this system for $f(x)=x^2-\cos{y}$, $g(x)=\sin{x}+x^2+y^3$ means that
+
+\begin{equation*}
+J=
+ \begin{bmatrix}
+	2x & \sin{y}  \\[0.2em]
+	\cos{x}+2x & 3y^2  \\[0.2em]
+     \end{bmatrix}
+\end{equation*}
+
+starting from $X_0=[1.5,-1.25]^T$ and performing one iteration yields that 
+
+\begin{equation*}
+F_0=\begin{bmatrix} 1.93467763 \\[0.2em] 1.29436998 \\[0.2em] \end{bmatrix}
+\end{equation*}
+
+\begin{eqnarray*}
+X_1=\begin{bmatrix} 1.5 \\[0.2em] -1.25 \\[0.2em] \end{bmatrix}-
+ \begin{bmatrix}
+	3 & \sin{(-1.25)}  \\[0.2em]
+	\cos{(1.5)}+3 & 3(1.25)^2  \\[0.2em]
+     \end{bmatrix}^{-1}
+\begin{bmatrix} 1.93467763 \\[0.2em] 1.29436998 \\[0.2em] \end{bmatrix} \\
+X_1= \begin{bmatrix} 0.89345046 \\[0.2em] -1.12878736 \\[0.2em] \end{bmatrix}
+\end{eqnarray*}
+\begin{equation*}
+F_1=\begin{bmatrix} 0.37049751 \\[0.2em] 0.13923588 \\[0.2em] \end{bmatrix}
+\end{equation*}
+
+\vfil\eject
+
+{\bf Problem 7}
+
+Two relaxation iterations will be computer for this system of equations. In the first, we do the following:
+
+\begin{eqnarray*}
+2x_1=-3 \\
+x_1=-\frac{3}{2} \\
+\frac{3}{2}+2x_2=2 \\
+x_2=\frac{1}{4} \\
+-\frac{1}{4}+x_3=0 \\
+x_3=\frac{1}{4}
+\end{eqnarray*}
+
+So in the first sweep $x_1=-1.5$, $x_2=x_3=0.25$. In the second sweep
+
+\begin{eqnarray*}
+2x_1-\frac{1}{4}=-3 \\
+x_1=-\frac{11}{8} \\
+\frac{11}{8}+2x_2-\frac{1}{4}=2 \\
+x_2=\frac{7}{16} \\
+-\frac{7}{16}+x_3=0 \\
+x_3=\frac{7}{16}
+\end{eqnarray*}
+
+Now $x_1=1.375$, $x_2=x_3=0.4375$. Slowly but surely we are getting to the expected values of $x_1=1$, $x_2=x_3=1$
+
+\end{document}

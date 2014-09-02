@@ -1,0 +1,9 @@
+set xlabel "Time (seconds)";
+set ylabel "Voltage (mV)";
+unset key;
+set term post eps color;
+
+set title "Tonic Spiking";
+set out "./data/figures/A.eps";
+plot "./data/64/datA.out" with lines;
+replot "./data/64/datA.out" using 1:7 with lines lc rgb 'blue';

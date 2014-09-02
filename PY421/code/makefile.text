@@ -1,0 +1,9 @@
+# Very elemntary makefile
+
+# comment lines begin with #
+
+# backup depends on text and is "made" by copying text to backup
+# note the mandatory tab in the rule to make backup
+
+backup: text
+	cp -f text backup

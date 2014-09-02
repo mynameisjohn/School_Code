@@ -1,0 +1,84 @@
+set xlabel "Time (seconds)";
+set ylabel "Voltage (mV)";
+unset key;
+set term post eps color;
+
+set title "Class 1 Excitability";
+set out "./data/figures/A.eps";
+plot "./data/64/datA.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/B.eps";
+plot "./data/64/datB.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/C.eps";
+plot "./data/64/datC.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/D.eps";
+plot "./data/64/datD.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/E.eps";
+plot "./data/64/datE.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/F.eps";
+plot "./data/64/datF.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/G.eps";
+plot "./data/64/datG.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/H.eps";
+plot "./data/64/datH.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/I.eps";
+plot "./data/64/datI.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/J.eps";
+plot "./data/64/datJ.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/K.eps";
+plot "./data/64/datK.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/L.eps";
+plot "./data/64/datL.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/M.eps";
+plot "./data/64/datM.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/N.eps";
+plot "./data/64/datN.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/O.eps";
+plot "./data/64/datO.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/P.eps";
+plot "./data/64/datP.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/Q.eps";
+plot "./data/64/datQ.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/R.eps";
+plot "./data/64/datR.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/S.eps";
+plot "./data/64/datS.out" with lines;
+
+set title "Class 1 Excitability";
+set out "./data/figures/T.eps";
+plot "./data/64/datT.out" with lines;

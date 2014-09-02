@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 0pt
+\parskip 1mm
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+{\Large\bf CN 510 - Principles and Methods of Cognitive and Neural Modelling}
+
+\bigskip
+
+{\large\bf Assignment \# 1}
+\smallskip
+
+{\large\bf John Joseph}
+\end{center}
+
+\bigskip
+{\bf Problem 1}
+\bigskip
+
+We are given the following non-homogeneous differential equation
+
+\begin{equation}
+\frac{dx}{dt} + Ax = I
+\end{equation}
+
+The solution of course exists in two parts: homogeneous, and particlar. The homogenous solution can be found as follows:
+
+\begin{equation}
+\frac{dx_h}{dt} + Ax_h = 0
+\end{equation}
+\begin{equation}
+\frac{dx_h}{dt} = -Ax_h
+\end{equation}
+\begin{equation}
+x_h(t) = Ce^{-At}
+\end{equation}
+
+Now that we have the homogeneous solution, let us solve for the particular solution. 
+
+\begin{equation}
+\frac{dx_p}{dt} + Ax_p = I
+\end{equation}
+\begin{equation}
+x_p(t) = mt+b
+\end{equation}
+\begin{equation}
+\frac{dx_p}{dt} + Ax_p = m + A(mt+b) = I
+\end{equation}
+\begin{equation}
+m = 0
+\end{equation}
+\begin{equation}
+b = \frac{I}{A}
+\end{equation}
+\begin{equation}
+x_p(t) = \frac{I}{A}
+\end{equation}
+
+\begin{figure}[h!]
+\begin{center}
+\epsfig{file=graph1,width=11cm,height=8cm}
+\end{center}
+\caption{\label{pict1} The above equation solved from t=0 to t=5. }
+\end{figure}
+
+\end{document}

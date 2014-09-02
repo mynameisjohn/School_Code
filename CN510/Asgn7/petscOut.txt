@@ -1,0 +1,1216 @@
+#@echo "HEY LOOK IT'S /opt/vol/intel/mkl/lib/intel64
+##################################################################
+#                                                                #
+#                  build DOUBLE version of PETSc                 #
+#                                                                #
+##################################################################
+Creating symbolic links in build-real/ directory...
+(mkdir -p build-real; \
+	 cd build-real; \
+	 lndir ../petsc-3.4.0/; \
+	 export PETSC_DIR=/home/johnJoseph/nemo5/libs/petsc/build-real; \
+	 export PETSC_ARCH=linux; \
+	 echo "Starting REAL configure-make process..."; \
+	 ./config/configure.py  --with-blacs-lib=/opt/vol/intel/mkl/lib/intel64/libmkl_blacs_intelmpi_lp64.a --with-scalapack-lib=/opt/vol/intel/mkl/lib/intel64/libmkl_scalapack_lp64.a --with-scalapack-include=/opt/vol/intel/mkl/include --with-blacs-include=/opt/vol/intel/mkl/include --download-metis --with-cmake=/usr/bin/cmake28 --with-x=0 --with-hdf5 --with-hdf5-dir=/usr/lib --with-scalar-type=real --with-single-library=0  --with-pic=1 --with-shared-libraries=0 --with-blas-lapack-dir=/opt/vol/intel/mkl/lib/intel64 --with-clanguage=C++ --with-fortran --with-debugging=1 --with-cc="mpicc" --with-fc="mpif90" --with-cxx="mpicxx -cxx=icc " COPTFLAGS="-O0" CXXOPTFLAGS="-O0" FOPTFLAGS="-O0" --download-parmetis=1 --download-superlu_dist=1 --download-mumps=1; \
+	 make PETSC_DIR=/home/johnJoseph/nemo5/libs/petsc/build-real PETSC_ARCH=linux shared all; )
+../petsc-3.4.0/tutorials:
+../../petsc-3.4.0/tutorials/python:
+../../../petsc-3.4.0/tutorials/python/output:
+../petsc-3.4.0/src:
+../../petsc-3.4.0/src/benchmarks:
+../../../petsc-3.4.0/src/benchmarks/streams:
+../../petsc-3.4.0/src/sys:
+../../../petsc-3.4.0/src/sys/dll:
+../../../../petsc-3.4.0/src/sys/dll/ftn-auto:
+../../../petsc-3.4.0/src/sys/time:
+../../../../petsc-3.4.0/src/sys/time/rs6000_time:
+../../../../petsc-3.4.0/src/sys/time/nt_time:
+../../../../petsc-3.4.0/src/sys/time/ftn-custom:
+../../../../petsc-3.4.0/src/sys/time/ftn-auto:
+../../../petsc-3.4.0/src/sys/examples:
+../../../../petsc-3.4.0/src/sys/examples/tutorials:
+../../../../../petsc-3.4.0/src/sys/examples/tutorials/output:
+../../../../petsc-3.4.0/src/sys/examples/tests:
+../../../../../petsc-3.4.0/src/sys/examples/tests/output:
+../../../petsc-3.4.0/src/sys/logging:
+../../../../petsc-3.4.0/src/sys/logging/utils:
+../../../../petsc-3.4.0/src/sys/logging/ftn-custom:
+../../../../petsc-3.4.0/src/sys/logging/ftn-auto:
+../../../petsc-3.4.0/src/sys/utils:
+../../../../petsc-3.4.0/src/sys/utils/ftn-kernels:
+../../../../petsc-3.4.0/src/sys/utils/ftn-custom:
+../../../../petsc-3.4.0/src/sys/utils/ftn-auto:
+../../../petsc-3.4.0/src/sys/objects:
+../../../../petsc-3.4.0/src/sys/objects/f2003-src:
+../../../../../petsc-3.4.0/src/sys/objects/f2003-src/fsrc:
+../../../../petsc-3.4.0/src/sys/objects/ftn-custom:
+../../../../petsc-3.4.0/src/sys/objects/ftn-auto:
+../../../petsc-3.4.0/src/sys/f90-mod:
+../../../petsc-3.4.0/src/sys/yaml:
+../../../../petsc-3.4.0/src/sys/yaml/ftn-custom:
+../../../petsc-3.4.0/src/sys/memory:
+../../../../petsc-3.4.0/src/sys/memory/ftn-custom:
+../../../../petsc-3.4.0/src/sys/memory/ftn-auto:
+../../../petsc-3.4.0/src/sys/python:
+../../../../petsc-3.4.0/src/sys/python/ftn-custom:
+../../../petsc-3.4.0/src/sys/fileio:
+../../../../petsc-3.4.0/src/sys/fileio/ftn-custom:
+../../../../petsc-3.4.0/src/sys/fileio/ftn-auto:
+../../../petsc-3.4.0/src/sys/f90-src:
+../../../../petsc-3.4.0/src/sys/f90-src/fsrc:
+../../../petsc-3.4.0/src/sys/totalview:
+../../../petsc-3.4.0/src/sys/threadcomm:
+../../../../petsc-3.4.0/src/sys/threadcomm/examples:
+../../../../../petsc-3.4.0/src/sys/threadcomm/examples/tutorials:
+../../../../petsc-3.4.0/src/sys/threadcomm/interface:
+../../../../../petsc-3.4.0/src/sys/threadcomm/interface/ftn-auto:
+../../../../petsc-3.4.0/src/sys/threadcomm/impls:
+../../../../../petsc-3.4.0/src/sys/threadcomm/impls/nothread:
+../../../../../petsc-3.4.0/src/sys/threadcomm/impls/openmp:
+../../../../../petsc-3.4.0/src/sys/threadcomm/impls/pthread:
+../../../petsc-3.4.0/src/sys/classes:
+../../../../petsc-3.4.0/src/sys/classes/matlabengine:
+../../../../../petsc-3.4.0/src/sys/classes/matlabengine/ftn-custom:
+../../../../../petsc-3.4.0/src/sys/classes/matlabengine/ftn-auto:
+../../../../petsc-3.4.0/src/sys/classes/bag:
+../../../../../petsc-3.4.0/src/sys/classes/bag/f2003-src:
+../../../../../../petsc-3.4.0/src/sys/classes/bag/f2003-src/fsrc:
+../../../../../petsc-3.4.0/src/sys/classes/bag/f90-custom:
+../../../../../petsc-3.4.0/src/sys/classes/bag/ftn-custom:
+../../../../../petsc-3.4.0/src/sys/classes/bag/ftn-auto:
+../../../../petsc-3.4.0/src/sys/classes/viewer:
+../../../../../petsc-3.4.0/src/sys/classes/viewer/examples:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/examples/tutorials:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/examples/tests:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/examples/tests/output:
+../../../../../petsc-3.4.0/src/sys/classes/viewer/interface:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/interface/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/interface/ftn-auto:
+../../../../../petsc-3.4.0/src/sys/classes/viewer/impls:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/vtk:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/vtk/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/vu:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/matlab:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/matlab/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/string:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/string/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/mathematica:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/hdf5:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/hdf5/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/socket:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/socket/matlab:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/socket/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/binary:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/binary/f90-custom:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/binary/ftn-custom:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/binary/ftn-auto:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/ascii:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/ascii/ftn-custom:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/ascii/ftn-auto:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/draw:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/draw/ftn-custom:
+../../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/draw/ftn-auto:
+../../../../../../petsc-3.4.0/src/sys/classes/viewer/impls/ams:
+../../../../petsc-3.4.0/src/sys/classes/draw:
+../../../../../petsc-3.4.0/src/sys/classes/draw/examples:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/examples/tutorials:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/examples/tests:
+../../../../../petsc-3.4.0/src/sys/classes/draw/utils:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/utils/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/utils/ftn-auto:
+../../../../../petsc-3.4.0/src/sys/classes/draw/interface:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/interface/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/interface/ftn-auto:
+../../../../../petsc-3.4.0/src/sys/classes/draw/impls:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/impls/tikz:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/impls/opengl:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/impls/x:
+../../../../../../../petsc-3.4.0/src/sys/classes/draw/impls/x/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/draw/impls/win32:
+../../../../petsc-3.4.0/src/sys/classes/random:
+../../../../../petsc-3.4.0/src/sys/classes/random/examples:
+../../../../../../petsc-3.4.0/src/sys/classes/random/examples/tutorials:
+../../../../../petsc-3.4.0/src/sys/classes/random/interface:
+../../../../../../petsc-3.4.0/src/sys/classes/random/interface/ftn-custom:
+../../../../../../petsc-3.4.0/src/sys/classes/random/interface/ftn-auto:
+../../../../../petsc-3.4.0/src/sys/classes/random/impls:
+../../../../../../petsc-3.4.0/src/sys/classes/random/impls/rand48:
+../../../../../../petsc-3.4.0/src/sys/classes/random/impls/sprng:
+../../../../../../petsc-3.4.0/src/sys/classes/random/impls/rand:
+../../../petsc-3.4.0/src/sys/webserver:
+../../../petsc-3.4.0/src/sys/fsrc:
+../../../petsc-3.4.0/src/sys/mpiuni:
+../../../../petsc-3.4.0/src/sys/mpiuni/f90-mod:
+../../../petsc-3.4.0/src/sys/ams:
+../../../../petsc-3.4.0/src/sys/ams/java:
+../../../../petsc-3.4.0/src/sys/ams/matlab:
+../../../petsc-3.4.0/src/sys/error:
+../../../../petsc-3.4.0/src/sys/error/examples:
+../../../../../petsc-3.4.0/src/sys/error/examples/tests:
+../../../../petsc-3.4.0/src/sys/error/ftn-custom:
+../../../../petsc-3.4.0/src/sys/error/ftn-auto:
+../../../petsc-3.4.0/src/sys/info:
+../../../../petsc-3.4.0/src/sys/info/ftn-custom:
+../../../../petsc-3.4.0/src/sys/info/ftn-auto:
+../../../petsc-3.4.0/src/sys/ftn-custom:
+../../petsc-3.4.0/src/contrib:
+../../../petsc-3.4.0/src/contrib/nightlysummary:
+../../../../petsc-3.4.0/src/contrib/nightlysummary/html:
+../../../petsc-3.4.0/src/contrib/fun3d:
+../../../../petsc-3.4.0/src/contrib/fun3d/comp:
+../../../../petsc-3.4.0/src/contrib/fun3d/incomp:
+../../../petsc-3.4.0/src/contrib/style:
+../../../../petsc-3.4.0/src/contrib/style/html:
+../../../../petsc-3.4.0/src/contrib/style/checks:
+../../petsc-3.4.0/src/ts:
+../../../petsc-3.4.0/src/ts/examples:
+../../../../petsc-3.4.0/src/ts/examples/tutorials:
+../../../../../petsc-3.4.0/src/ts/examples/tutorials/eimex:
+../../../../../petsc-3.4.0/src/ts/examples/tutorials/phasefield:
+../../../../../petsc-3.4.0/src/ts/examples/tutorials/advection-diffusion-reaction:
+../../../../../petsc-3.4.0/src/ts/examples/tutorials/output:
+../../../../../petsc-3.4.0/src/ts/examples/tutorials/power_grid:
+../../../../../../petsc-3.4.0/src/ts/examples/tutorials/power_grid/stability_9bus:
+../../../../petsc-3.4.0/src/ts/examples/tests:
+../../../../../petsc-3.4.0/src/ts/examples/tests/output:
+../../../petsc-3.4.0/src/ts/utils:
+../../../petsc-3.4.0/src/ts/interface:
+../../../../petsc-3.4.0/src/ts/interface/ftn-custom:
+../../../../petsc-3.4.0/src/ts/interface/ftn-auto:
+../../../petsc-3.4.0/src/ts/adapt:
+../../../../petsc-3.4.0/src/ts/adapt/interface:
+../../../../../petsc-3.4.0/src/ts/adapt/interface/ftn-auto:
+../../../../petsc-3.4.0/src/ts/adapt/impls:
+../../../../../petsc-3.4.0/src/ts/adapt/impls/cfl:
+../../../../../petsc-3.4.0/src/ts/adapt/impls/none:
+../../../../../petsc-3.4.0/src/ts/adapt/impls/basic:
+../../../petsc-3.4.0/src/ts/f90-mod:
+../../../petsc-3.4.0/src/ts/impls:
+../../../../petsc-3.4.0/src/ts/impls/pseudo:
+../../../../../petsc-3.4.0/src/ts/impls/pseudo/ftn-auto:
+../../../../petsc-3.4.0/src/ts/impls/explicit:
+../../../../../petsc-3.4.0/src/ts/impls/explicit/rk:
+../../../../../../petsc-3.4.0/src/ts/impls/explicit/rk/ftn-auto:
+../../../../../petsc-3.4.0/src/ts/impls/explicit/ssp:
+../../../../../../petsc-3.4.0/src/ts/impls/explicit/ssp/ftn-custom:
+../../../../../../petsc-3.4.0/src/ts/impls/explicit/ssp/ftn-auto:
+../../../../../petsc-3.4.0/src/ts/impls/explicit/euler:
+../../../../petsc-3.4.0/src/ts/impls/rosw:
+../../../../../petsc-3.4.0/src/ts/impls/rosw/ftn-custom:
+../../../../petsc-3.4.0/src/ts/impls/arkimex:
+../../../../../petsc-3.4.0/src/ts/impls/arkimex/ftn-custom:
+../../../../petsc-3.4.0/src/ts/impls/eimex:
+../../../../petsc-3.4.0/src/ts/impls/python:
+../../../../../petsc-3.4.0/src/ts/impls/python/ftn-custom:
+../../../../petsc-3.4.0/src/ts/impls/implicit:
+../../../../../petsc-3.4.0/src/ts/impls/implicit/sundials:
+../../../../../../petsc-3.4.0/src/ts/impls/implicit/sundials/ftn-custom:
+../../../../../../petsc-3.4.0/src/ts/impls/implicit/sundials/ftn-auto:
+../../../../../petsc-3.4.0/src/ts/impls/implicit/gl:
+../../../../../petsc-3.4.0/src/ts/impls/implicit/theta:
+../../../../../../petsc-3.4.0/src/ts/impls/implicit/theta/ftn-auto:
+../../../../../petsc-3.4.0/src/ts/impls/implicit/alpha:
+../../../../../../petsc-3.4.0/src/ts/impls/implicit/alpha/ftn-auto:
+../../../petsc-3.4.0/src/ts/characteristic:
+../../../../petsc-3.4.0/src/ts/characteristic/examples:
+../../../../../petsc-3.4.0/src/ts/characteristic/examples/tutorials:
+../../../../petsc-3.4.0/src/ts/characteristic/interface:
+../../../../../petsc-3.4.0/src/ts/characteristic/interface/ftn-auto:
+../../../../petsc-3.4.0/src/ts/characteristic/impls:
+../../../../../petsc-3.4.0/src/ts/characteristic/impls/da:
+../../petsc-3.4.0/src/ksp:
+../../../petsc-3.4.0/src/ksp/f90-mod:
+../../../petsc-3.4.0/src/ksp/ksp:
+../../../../petsc-3.4.0/src/ksp/ksp/examples:
+../../../../../petsc-3.4.0/src/ksp/ksp/examples/tutorials:
+../../../../../../petsc-3.4.0/src/ksp/ksp/examples/tutorials/data:
+../../../../../../petsc-3.4.0/src/ksp/ksp/examples/tutorials/output:
+../../../../../petsc-3.4.0/src/ksp/ksp/examples/tests:
+../../../../../../petsc-3.4.0/src/ksp/ksp/examples/tests/scripts:
+../../../../../../petsc-3.4.0/src/ksp/ksp/examples/tests/output:
+../../../../petsc-3.4.0/src/ksp/ksp/utils:
+../../../../../petsc-3.4.0/src/ksp/ksp/utils/ftn-auto:
+../../../../petsc-3.4.0/src/ksp/ksp/interface:
+../../../../../petsc-3.4.0/src/ksp/ksp/interface/f90-custom:
+../../../../../petsc-3.4.0/src/ksp/ksp/interface/ftn-custom:
+../../../../../petsc-3.4.0/src/ksp/ksp/interface/ftn-auto:
+../../../../petsc-3.4.0/src/ksp/ksp/impls:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/tfqmr:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/lsqr:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/specest:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/preonly:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/bcgsl:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/bcgsl/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/nash:
+../../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/nash/ftn-auto:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/pipecg:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/groppcg:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/gltr:
+../../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/gltr/ftn-auto:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/cgne:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/stcg:
+../../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/stcg/ftn-auto:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cg/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/bcgs:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/bcgs/fbcgs:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/bcgs/fbcgsr:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/python:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/python/ftn-custom:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/cgs:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/lcd:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/symmlq:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/rich:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/rich/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres/agmres:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres/pgmres:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres/fgmres:
+../../../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres/fgmres/ftn-custom:
+../../../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres/fgmres/ftn-auto:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres/lgmres:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres/dgmres:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/gmres/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/tcqmr:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/gcr:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/ibcgs:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/bicg:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/cheby:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cheby/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/cr:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/cr/pipecr:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/qcg:
+../../../../../../petsc-3.4.0/src/ksp/ksp/impls/qcg/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/ksp/impls/minres:
+../../../petsc-3.4.0/src/ksp/pc:
+../../../../petsc-3.4.0/src/ksp/pc/examples:
+../../../../../petsc-3.4.0/src/ksp/pc/examples/tutorials:
+../../../../../../petsc-3.4.0/src/ksp/pc/examples/tutorials/output:
+../../../../../petsc-3.4.0/src/ksp/pc/examples/tests:
+../../../../../../petsc-3.4.0/src/ksp/pc/examples/tests/output:
+../../../../petsc-3.4.0/src/ksp/pc/interface:
+../../../../../petsc-3.4.0/src/ksp/pc/interface/ftn-custom:
+../../../../../petsc-3.4.0/src/ksp/pc/interface/ftn-auto:
+../../../../petsc-3.4.0/src/ksp/pc/impls:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/eisens:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/eisens/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/sacusp:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/shell:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/shell/ftn-custom:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/shell/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/lsc:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/spai:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/spai/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/gasm:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/gasm/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/tfs:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/composite:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/composite/ftn-custom:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/composite/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/mg:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/mg/ftn-custom:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/mg/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/jacobi:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/jacobi/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/factor:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/factor/ilu:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/factor/icc:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/factor/lu:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/factor/cholesky:
+../../../../../../../petsc-3.4.0/src/ksp/pc/impls/factor/cholesky/ftn-auto:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/factor/ftn-custom:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/factor/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/fieldsplit:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/fieldsplit/ftn-custom:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/fieldsplit/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/svd:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/parms:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/parms/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/cp:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/bddc:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/bddc/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/hypre:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/hypre/ftn-custom:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/is:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/is/nn:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/is/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/none:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/sor:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/sor/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/ksp:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/ksp/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/wb:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/wb/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/ainvcusp:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/python:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/python/ftn-custom:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/ml:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/bjacobi:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/bjacobi/ftn-custom:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/bjacobi/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/redundant:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/redundant/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/asa:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/gamg:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/gamg/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/mat:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/pbjacobi:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/asm:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/asm/ftn-custom:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/asm/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/openmp:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/redistribute:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/redistribute/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/galerkin:
+../../../../../../petsc-3.4.0/src/ksp/pc/impls/galerkin/ftn-auto:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/supportgraph:
+../../../../../petsc-3.4.0/src/ksp/pc/impls/bicgstabcusp:
+../../petsc-3.4.0/src/snes:
+../../../petsc-3.4.0/src/snes/examples:
+../../../../petsc-3.4.0/src/snes/examples/tutorials:
+../../../../../petsc-3.4.0/src/snes/examples/tutorials/output:
+../../../../../petsc-3.4.0/src/snes/examples/tutorials/cahn-hilliard-schemes:
+../../../../../petsc-3.4.0/src/snes/examples/tutorials/ex10d:
+../../../../../../petsc-3.4.0/src/snes/examples/tutorials/ex10d/output:
+../../../../petsc-3.4.0/src/snes/examples/tests:
+../../../../../petsc-3.4.0/src/snes/examples/tests/output:
+../../../petsc-3.4.0/src/snes/utils:
+../../../../petsc-3.4.0/src/snes/utils/mesh:
+../../../../petsc-3.4.0/src/snes/utils/ftn-custom:
+../../../petsc-3.4.0/src/snes/interface:
+../../../../petsc-3.4.0/src/snes/interface/f90-custom:
+../../../../petsc-3.4.0/src/snes/interface/noise:
+../../../../petsc-3.4.0/src/snes/interface/ftn-custom:
+../../../../petsc-3.4.0/src/snes/interface/ftn-auto:
+../../../petsc-3.4.0/src/snes/f90-mod:
+../../../petsc-3.4.0/src/snes/impls:
+../../../../petsc-3.4.0/src/snes/impls/vi:
+../../../../../petsc-3.4.0/src/snes/impls/vi/ss:
+../../../../../petsc-3.4.0/src/snes/impls/vi/rs:
+../../../../../petsc-3.4.0/src/snes/impls/vi/rsaug:
+../../../../../petsc-3.4.0/src/snes/impls/vi/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/shell:
+../../../../../petsc-3.4.0/src/snes/impls/shell/ftn-custom:
+../../../../../petsc-3.4.0/src/snes/impls/shell/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/multiblock:
+../../../../../petsc-3.4.0/src/snes/impls/multiblock/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/fas:
+../../../../../petsc-3.4.0/src/snes/impls/fas/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/ms:
+../../../../petsc-3.4.0/src/snes/impls/richardson:
+../../../../petsc-3.4.0/src/snes/impls/ksponly:
+../../../../petsc-3.4.0/src/snes/impls/gs:
+../../../../../petsc-3.4.0/src/snes/impls/gs/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/ls:
+../../../../petsc-3.4.0/src/snes/impls/python:
+../../../../../petsc-3.4.0/src/snes/impls/python/ftn-custom:
+../../../../petsc-3.4.0/src/snes/impls/nasm:
+../../../../../petsc-3.4.0/src/snes/impls/nasm/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/qn:
+../../../../../petsc-3.4.0/src/snes/impls/qn/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/ngmres:
+../../../../../petsc-3.4.0/src/snes/impls/ngmres/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/tr:
+../../../../petsc-3.4.0/src/snes/impls/ncg:
+../../../../../petsc-3.4.0/src/snes/impls/ncg/ftn-auto:
+../../../../petsc-3.4.0/src/snes/impls/test:
+../../../petsc-3.4.0/src/snes/mf:
+../../../../petsc-3.4.0/src/snes/mf/ftn-auto:
+../../../petsc-3.4.0/src/snes/linesearch:
+../../../../petsc-3.4.0/src/snes/linesearch/interface:
+../../../../../petsc-3.4.0/src/snes/linesearch/interface/ftn-custom:
+../../../../../petsc-3.4.0/src/snes/linesearch/interface/ftn-auto:
+../../../../petsc-3.4.0/src/snes/linesearch/impls:
+../../../../../petsc-3.4.0/src/snes/linesearch/impls/shell:
+../../../../../../petsc-3.4.0/src/snes/linesearch/impls/shell/ftn-custom:
+../../../../../petsc-3.4.0/src/snes/linesearch/impls/l2:
+../../../../../petsc-3.4.0/src/snes/linesearch/impls/cp:
+../../../../../petsc-3.4.0/src/snes/linesearch/impls/bt:
+../../../../../../petsc-3.4.0/src/snes/linesearch/impls/bt/ftn-auto:
+../../../../../petsc-3.4.0/src/snes/linesearch/impls/basic:
+../../petsc-3.4.0/src/vec:
+../../../petsc-3.4.0/src/vec/pf:
+../../../../petsc-3.4.0/src/vec/pf/examples:
+../../../../../petsc-3.4.0/src/vec/pf/examples/tutorials:
+../../../../petsc-3.4.0/src/vec/pf/interface:
+../../../../../petsc-3.4.0/src/vec/pf/interface/ftn-auto:
+../../../../petsc-3.4.0/src/vec/pf/impls:
+../../../../../petsc-3.4.0/src/vec/pf/impls/constant:
+../../../../../petsc-3.4.0/src/vec/pf/impls/matlab:
+../../../../../petsc-3.4.0/src/vec/pf/impls/string:
+../../../petsc-3.4.0/src/vec/is:
+../../../../petsc-3.4.0/src/vec/is/utils:
+../../../../../petsc-3.4.0/src/vec/is/utils/ftn-auto:
+../../../../petsc-3.4.0/src/vec/is/is:
+../../../../../petsc-3.4.0/src/vec/is/is/examples:
+../../../../../../petsc-3.4.0/src/vec/is/is/examples/tutorials:
+../../../../../../../petsc-3.4.0/src/vec/is/is/examples/tutorials/output:
+../../../../../../petsc-3.4.0/src/vec/is/is/examples/tests:
+../../../../../../../petsc-3.4.0/src/vec/is/is/examples/tests/output:
+../../../../../petsc-3.4.0/src/vec/is/is/utils:
+../../../../../../petsc-3.4.0/src/vec/is/is/utils/f90-custom:
+../../../../../../petsc-3.4.0/src/vec/is/is/utils/ftn-custom:
+../../../../../../petsc-3.4.0/src/vec/is/is/utils/ftn-auto:
+../../../../../petsc-3.4.0/src/vec/is/is/interface:
+../../../../../../petsc-3.4.0/src/vec/is/is/interface/f90-custom:
+../../../../../../petsc-3.4.0/src/vec/is/is/interface/ftn-custom:
+../../../../../../petsc-3.4.0/src/vec/is/is/interface/ftn-auto:
+../../../../../petsc-3.4.0/src/vec/is/is/impls:
+../../../../../../petsc-3.4.0/src/vec/is/is/impls/f90-custom:
+../../../../../../petsc-3.4.0/src/vec/is/is/impls/stride:
+../../../../../../../petsc-3.4.0/src/vec/is/is/impls/stride/ftn-auto:
+../../../../../../petsc-3.4.0/src/vec/is/is/impls/general:
+../../../../../../../petsc-3.4.0/src/vec/is/is/impls/general/ftn-auto:
+../../../../../../petsc-3.4.0/src/vec/is/is/impls/block:
+../../../../../../../petsc-3.4.0/src/vec/is/is/impls/block/ftn-custom:
+../../../../../../../petsc-3.4.0/src/vec/is/is/impls/block/ftn-auto:
+../../../../petsc-3.4.0/src/vec/is/ao:
+../../../../../petsc-3.4.0/src/vec/is/ao/examples:
+../../../../../../petsc-3.4.0/src/vec/is/ao/examples/tests:
+../../../../../../../petsc-3.4.0/src/vec/is/ao/examples/tests/output:
+../../../../../../../petsc-3.4.0/src/vec/is/ao/examples/tests/ex3d:
+../../../../../../../../petsc-3.4.0/src/vec/is/ao/examples/tests/ex3d/output:
+../../../../../petsc-3.4.0/src/vec/is/ao/interface:
+../../../../../../petsc-3.4.0/src/vec/is/ao/interface/ftn-custom:
+../../../../../../petsc-3.4.0/src/vec/is/ao/interface/ftn-auto:
+../../../../../petsc-3.4.0/src/vec/is/ao/impls:
+../../../../../../petsc-3.4.0/src/vec/is/ao/impls/memscalable:
+../../../../../../petsc-3.4.0/src/vec/is/ao/impls/mapping:
+../../../../../../../petsc-3.4.0/src/vec/is/ao/impls/mapping/ftn-custom:
+../../../../../../../petsc-3.4.0/src/vec/is/ao/impls/mapping/ftn-auto:
+../../../../../../petsc-3.4.0/src/vec/is/ao/impls/basic:
+../../../../../../../petsc-3.4.0/src/vec/is/ao/impls/basic/ftn-custom:
+../../../../petsc-3.4.0/src/vec/is/sf:
+../../../../../petsc-3.4.0/src/vec/is/sf/examples:
+../../../../../../petsc-3.4.0/src/vec/is/sf/examples/tutorials:
+../../../../../../../petsc-3.4.0/src/vec/is/sf/examples/tutorials/output:
+../../../../../petsc-3.4.0/src/vec/is/sf/interface:
+../../../../../../petsc-3.4.0/src/vec/is/sf/interface/ftn-auto:
+../../../../../petsc-3.4.0/src/vec/is/sf/impls:
+../../../../../../petsc-3.4.0/src/vec/is/sf/impls/window:
+../../../../../../petsc-3.4.0/src/vec/is/sf/impls/basic:
+../../../petsc-3.4.0/src/vec/f90-mod:
+../../../petsc-3.4.0/src/vec/vec:
+../../../../petsc-3.4.0/src/vec/vec/examples:
+../../../../../petsc-3.4.0/src/vec/vec/examples/tutorials:
+../../../../../../petsc-3.4.0/src/vec/vec/examples/tutorials/output:
+../../../../../petsc-3.4.0/src/vec/vec/examples/tests:
+../../../../../../petsc-3.4.0/src/vec/vec/examples/tests/output:
+../../../../petsc-3.4.0/src/vec/vec/utils:
+../../../../../petsc-3.4.0/src/vec/vec/utils/matlab:
+../../../../../petsc-3.4.0/src/vec/vec/utils/f90-custom:
+../../../../../petsc-3.4.0/src/vec/vec/utils/veccusp:
+../../../../../../petsc-3.4.0/src/vec/vec/utils/veccusp/ftn-auto:
+../../../../../petsc-3.4.0/src/vec/vec/utils/ftn-custom:
+../../../../../petsc-3.4.0/src/vec/vec/utils/ftn-auto:
+../../../../petsc-3.4.0/src/vec/vec/interface:
+../../../../../petsc-3.4.0/src/vec/vec/interface/f90-custom:
+../../../../../petsc-3.4.0/src/vec/vec/interface/ftn-custom:
+../../../../../petsc-3.4.0/src/vec/vec/interface/ftn-auto:
+../../../../petsc-3.4.0/src/vec/vec/impls:
+../../../../../petsc-3.4.0/src/vec/vec/impls/shared:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/shared/ftn-auto:
+../../../../../petsc-3.4.0/src/vec/vec/impls/hypre:
+../../../../../petsc-3.4.0/src/vec/vec/impls/seq:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/seq/seqcusp:
+../../../../../../../petsc-3.4.0/src/vec/vec/impls/seq/seqcusp/ftn-auto:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/seq/f90-custom:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/seq/ftn-kernels:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/seq/ftn-custom:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/seq/ftn-auto:
+../../../../../petsc-3.4.0/src/vec/vec/impls/nest:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/nest/ftn-custom:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/nest/ftn-auto:
+../../../../../petsc-3.4.0/src/vec/vec/impls/mpi:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/mpi/mpicusp:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/mpi/ftn-custom:
+../../../../../../petsc-3.4.0/src/vec/vec/impls/mpi/ftn-auto:
+../../petsc-3.4.0/src/mat:
+../../../petsc-3.4.0/src/mat/examples:
+../../../../petsc-3.4.0/src/mat/examples/tutorials:
+../../../../../petsc-3.4.0/src/mat/examples/tutorials/output:
+../../../../petsc-3.4.0/src/mat/examples/tests:
+../../../../../petsc-3.4.0/src/mat/examples/tests/output:
+../../../petsc-3.4.0/src/mat/utils:
+../../../../petsc-3.4.0/src/mat/utils/ftn-custom:
+../../../../petsc-3.4.0/src/mat/utils/ftn-auto:
+../../../petsc-3.4.0/src/mat/interface:
+../../../../petsc-3.4.0/src/mat/interface/f90-custom:
+../../../../petsc-3.4.0/src/mat/interface/ftn-custom:
+../../../../petsc-3.4.0/src/mat/interface/ftn-auto:
+../../../petsc-3.4.0/src/mat/order:
+../../../../petsc-3.4.0/src/mat/order/amd:
+../../../../petsc-3.4.0/src/mat/order/ftn-custom:
+../../../petsc-3.4.0/src/mat/partition:
+../../../../petsc-3.4.0/src/mat/partition/impls:
+../../../../../petsc-3.4.0/src/mat/partition/impls/scotch:
+../../../../../../petsc-3.4.0/src/mat/partition/impls/scotch/ftn-auto:
+../../../../../petsc-3.4.0/src/mat/partition/impls/chaco:
+../../../../../../petsc-3.4.0/src/mat/partition/impls/chaco/ftn-auto:
+../../../../../petsc-3.4.0/src/mat/partition/impls/pmetis:
+../../../../../../petsc-3.4.0/src/mat/partition/impls/pmetis/ftn-auto:
+../../../../../petsc-3.4.0/src/mat/partition/impls/party:
+../../../../../../petsc-3.4.0/src/mat/partition/impls/party/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/partition/impls/party/ftn-auto:
+../../../../petsc-3.4.0/src/mat/partition/ftn-custom:
+../../../../petsc-3.4.0/src/mat/partition/ftn-auto:
+../../../petsc-3.4.0/src/mat/color:
+../../../../petsc-3.4.0/src/mat/color/ftn-custom:
+../../../petsc-3.4.0/src/mat/f90-mod:
+../../../petsc-3.4.0/src/mat/impls:
+../../../../petsc-3.4.0/src/mat/impls/shell:
+../../../../../petsc-3.4.0/src/mat/impls/shell/ftn-custom:
+../../../../../petsc-3.4.0/src/mat/impls/shell/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/blockmat:
+../../../../../petsc-3.4.0/src/mat/impls/blockmat/seq:
+../../../../petsc-3.4.0/src/mat/impls/fft:
+../../../../../petsc-3.4.0/src/mat/impls/fft/fftw:
+../../../../../../petsc-3.4.0/src/mat/impls/fft/fftw/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/fft/fftw/ftn-auto:
+../../../../../petsc-3.4.0/src/mat/impls/fft/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/composite:
+../../../../../petsc-3.4.0/src/mat/impls/composite/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/dense:
+../../../../../petsc-3.4.0/src/mat/impls/dense/seq:
+../../../../../../petsc-3.4.0/src/mat/impls/dense/seq/ftn-custom:
+../../../../../petsc-3.4.0/src/mat/impls/dense/mpi:
+../../../../../../petsc-3.4.0/src/mat/impls/dense/mpi/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/dense/mpi/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/cufft:
+../../../../../petsc-3.4.0/src/mat/impls/cufft/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/scatter:
+../../../../../petsc-3.4.0/src/mat/impls/scatter/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/aij:
+../../../../../petsc-3.4.0/src/mat/impls/aij/seq:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/csrperm:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/seqcusparse:
+../../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/seqcusparse/ftn-auto:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/cholmod:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/seqcusp:
+../../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/seqcusp/ftn-auto:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/umfpack:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/essl:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/matlab:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/crl:
+../../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/crl/ftn-kernels:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/ftn-kernels:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/bas:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/superlu:
+../../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/superlu/ftn-auto:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/lusol:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/seq/ftn-auto:
+../../../../../petsc-3.4.0/src/mat/impls/aij/mpi:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/csrperm:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/crl:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/clique:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/mpicusparse:
+../../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/mpicusparse/ftn-auto:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/mpicusp:
+../../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/mpicusp/ftn-auto:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/pastix:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/mumps:
+../../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/mumps/ftn-auto:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/superlu_dist:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/aij/mpi/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/localref:
+../../../../../petsc-3.4.0/src/mat/impls/localref/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/is:
+../../../../../petsc-3.4.0/src/mat/impls/is/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/lrc:
+../../../../../petsc-3.4.0/src/mat/impls/lrc/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/sbaij:
+../../../../../petsc-3.4.0/src/mat/impls/sbaij/seq:
+../../../../../../petsc-3.4.0/src/mat/impls/sbaij/seq/sbstream:
+../../../../../../petsc-3.4.0/src/mat/impls/sbaij/seq/cholmod:
+../../../../../../petsc-3.4.0/src/mat/impls/sbaij/seq/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/sbaij/seq/ftn-auto:
+../../../../../petsc-3.4.0/src/mat/impls/sbaij/mpi:
+../../../../../../petsc-3.4.0/src/mat/impls/sbaij/mpi/sbstream:
+../../../../../../petsc-3.4.0/src/mat/impls/sbaij/mpi/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/sbaij/mpi/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/maij:
+../../../../petsc-3.4.0/src/mat/impls/nest:
+../../../../../petsc-3.4.0/src/mat/impls/nest/ftn-custom:
+../../../../../petsc-3.4.0/src/mat/impls/nest/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/python:
+../../../../../petsc-3.4.0/src/mat/impls/python/ftn-custom:
+../../../../petsc-3.4.0/src/mat/impls/normal:
+../../../../../petsc-3.4.0/src/mat/impls/normal/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/adj:
+../../../../../petsc-3.4.0/src/mat/impls/adj/mpi:
+../../../../../../petsc-3.4.0/src/mat/impls/adj/mpi/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/adj/mpi/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/baij:
+../../../../../petsc-3.4.0/src/mat/impls/baij/seq:
+../../../../../../petsc-3.4.0/src/mat/impls/baij/seq/ftn-kernels:
+../../../../../../petsc-3.4.0/src/mat/impls/baij/seq/bstream:
+../../../../../../petsc-3.4.0/src/mat/impls/baij/seq/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/baij/seq/ftn-auto:
+../../../../../petsc-3.4.0/src/mat/impls/baij/mpi:
+../../../../../../petsc-3.4.0/src/mat/impls/baij/mpi/bstream:
+../../../../../../petsc-3.4.0/src/mat/impls/baij/mpi/ftn-custom:
+../../../../../../petsc-3.4.0/src/mat/impls/baij/mpi/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/elemental:
+../../../../petsc-3.4.0/src/mat/impls/transpose:
+../../../../../petsc-3.4.0/src/mat/impls/transpose/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/mffd:
+../../../../../petsc-3.4.0/src/mat/impls/mffd/ftn-custom:
+../../../../../petsc-3.4.0/src/mat/impls/mffd/ftn-auto:
+../../../../petsc-3.4.0/src/mat/impls/submat:
+../../../../../petsc-3.4.0/src/mat/impls/submat/ftn-auto:
+../../../petsc-3.4.0/src/mat/coarsen:
+../../../../petsc-3.4.0/src/mat/coarsen/impls:
+../../../../../petsc-3.4.0/src/mat/coarsen/impls/mis:
+../../../../../petsc-3.4.0/src/mat/coarsen/impls/hem:
+../../../../petsc-3.4.0/src/mat/coarsen/ftn-auto:
+../../../petsc-3.4.0/src/mat/ftn-kernels:
+../../../petsc-3.4.0/src/mat/matfd:
+../../../../petsc-3.4.0/src/mat/matfd/ftn-custom:
+../../../../petsc-3.4.0/src/mat/matfd/ftn-auto:
+../../../petsc-3.4.0/src/mat/ftn-custom:
+../../petsc-3.4.0/src/dm:
+../../../petsc-3.4.0/src/dm/examples:
+../../../../petsc-3.4.0/src/dm/examples/tutorials:
+../../../../../petsc-3.4.0/src/dm/examples/tutorials/output:
+../../../../petsc-3.4.0/src/dm/examples/tests:
+../../../../../petsc-3.4.0/src/dm/examples/tests/scripts:
+../../../../../petsc-3.4.0/src/dm/examples/tests/output:
+../../../petsc-3.4.0/src/dm/interface:
+../../../../petsc-3.4.0/src/dm/interface/ftn-custom:
+../../../../petsc-3.4.0/src/dm/interface/ftn-auto:
+../../../petsc-3.4.0/src/dm/f90-mod:
+../../../petsc-3.4.0/src/dm/impls:
+../../../../petsc-3.4.0/src/dm/impls/shell:
+../../../../../petsc-3.4.0/src/dm/impls/shell/ftn-custom:
+../../../../../petsc-3.4.0/src/dm/impls/shell/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/composite:
+../../../../../petsc-3.4.0/src/dm/impls/composite/f90-custom:
+../../../../../petsc-3.4.0/src/dm/impls/composite/ftn-custom:
+../../../../../petsc-3.4.0/src/dm/impls/composite/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/cartesian:
+../../../../../petsc-3.4.0/src/dm/impls/cartesian/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/sliced:
+../../../../petsc-3.4.0/src/dm/impls/patch:
+../../../../../petsc-3.4.0/src/dm/impls/patch/examples:
+../../../../../../petsc-3.4.0/src/dm/impls/patch/examples/tests:
+../../../../../../../petsc-3.4.0/src/dm/impls/patch/examples/tests/output:
+../../../../../petsc-3.4.0/src/dm/impls/patch/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/redundant:
+../../../../../petsc-3.4.0/src/dm/impls/redundant/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/adda:
+../../../../../petsc-3.4.0/src/dm/impls/adda/examples:
+../../../../../../petsc-3.4.0/src/dm/impls/adda/examples/tests:
+../../../../../petsc-3.4.0/src/dm/impls/adda/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/da:
+../../../../../petsc-3.4.0/src/dm/impls/da/hypre:
+../../../../../petsc-3.4.0/src/dm/impls/da/f90-custom:
+../../../../../petsc-3.4.0/src/dm/impls/da/usfft:
+../../../../../petsc-3.4.0/src/dm/impls/da/ftn-custom:
+../../../../../petsc-3.4.0/src/dm/impls/da/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/plex:
+../../../../../petsc-3.4.0/src/dm/impls/plex/examples:
+../../../../../../petsc-3.4.0/src/dm/impls/plex/examples/tutorials:
+../../../../../../../petsc-3.4.0/src/dm/impls/plex/examples/tutorials/output:
+../../../../../../petsc-3.4.0/src/dm/impls/plex/examples/tests:
+../../../../../../../petsc-3.4.0/src/dm/impls/plex/examples/tests/output:
+../../../../../petsc-3.4.0/src/dm/impls/plex/f90-custom:
+../../../../../petsc-3.4.0/src/dm/impls/plex/ftn-custom:
+../../../../../petsc-3.4.0/src/dm/impls/plex/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/mesh:
+../../../../../petsc-3.4.0/src/dm/impls/mesh/examples:
+../../../../../../petsc-3.4.0/src/dm/impls/mesh/examples/tutorials:
+../../../../../../../petsc-3.4.0/src/dm/impls/mesh/examples/tutorials/output:
+../../../../../../petsc-3.4.0/src/dm/impls/mesh/examples/tests:
+../../../../../../../petsc-3.4.0/src/dm/impls/mesh/examples/tests/data:
+../../../../../../../petsc-3.4.0/src/dm/impls/mesh/examples/tests/meshes:
+../../../../../../../petsc-3.4.0/src/dm/impls/mesh/examples/tests/output:
+../../../../../petsc-3.4.0/src/dm/impls/mesh/f90-custom:
+../../../../../petsc-3.4.0/src/dm/impls/mesh/ftn-custom:
+../../../../../petsc-3.4.0/src/dm/impls/mesh/ftn-auto:
+../../../../petsc-3.4.0/src/dm/impls/moab:
+../../../../../petsc-3.4.0/src/dm/impls/moab/examples:
+../../../../../../petsc-3.4.0/src/dm/impls/moab/examples/tests:
+../../../../../../../petsc-3.4.0/src/dm/impls/moab/examples/tests/output:
+../../../petsc-3.4.0/src/dm/dt:
+../../../../petsc-3.4.0/src/dm/dt/examples:
+../../../../../petsc-3.4.0/src/dm/dt/examples/tests:
+../../../../../../petsc-3.4.0/src/dm/dt/examples/tests/output:
+../../../../petsc-3.4.0/src/dm/dt/interface:
+../../../../../petsc-3.4.0/src/dm/dt/interface/ftn-auto:
+../petsc-3.4.0/bin:
+../../petsc-3.4.0/bin/julia:
+../../../petsc-3.4.0/bin/julia/examples:
+../../../../petsc-3.4.0/bin/julia/examples/tutorials:
+../../petsc-3.4.0/bin/win32fe:
+../../petsc-3.4.0/bin/matlab:
+../../../petsc-3.4.0/bin/matlab/@PetscOpenFile:
+../../../petsc-3.4.0/bin/matlab/@PetscOpenSocket:
+../../../petsc-3.4.0/bin/matlab/classes:
+../../../../petsc-3.4.0/bin/matlab/classes/examples:
+../../../../../petsc-3.4.0/bin/matlab/classes/examples/tutorials:
+../../../../../petsc-3.4.0/bin/matlab/classes/examples/tests:
+../../petsc-3.4.0/bin/pythonscripts:
+../petsc-3.4.0/config:
+../../petsc-3.4.0/config/examples:
+../../../petsc-3.4.0/config/examples/asterix:
+../../../petsc-3.4.0/config/examples/basic:
+../../petsc-3.4.0/config/PETSc:
+../../../petsc-3.4.0/config/PETSc/utilities:
+../../../petsc-3.4.0/config/PETSc/packages:
+../../petsc-3.4.0/config/BuildSystem:
+../../../petsc-3.4.0/config/BuildSystem/build:
+../../../../petsc-3.4.0/config/BuildSystem/build/templates:
+../../../../petsc-3.4.0/config/BuildSystem/build/compile:
+../../../petsc-3.4.0/config/BuildSystem/regression:
+../../../petsc-3.4.0/config/BuildSystem/client-python:
+../../../petsc-3.4.0/config/BuildSystem/config:
+../../../../petsc-3.4.0/config/BuildSystem/config/regression:
+../../../../petsc-3.4.0/config/BuildSystem/config/packages:
+../../../../petsc-3.4.0/config/BuildSystem/config/compile:
+../../../petsc-3.4.0/config/BuildSystem/docs:
+../../../../petsc-3.4.0/config/BuildSystem/docs/examples:
+../../../../petsc-3.4.0/config/BuildSystem/docs/tutorials:
+../../../../petsc-3.4.0/config/BuildSystem/docs/website:
+../petsc-3.4.0/include:
+../../petsc-3.4.0/include/finclude:
+../../../petsc-3.4.0/include/finclude/ftn-custom:
+../../../petsc-3.4.0/include/finclude/ftn-auto:
+../../petsc-3.4.0/include/sieve:
+../../petsc-3.4.0/include/petsc-private:
+../../../petsc-3.4.0/include/petsc-private/kernels:
+../../petsc-3.4.0/include/web:
+../../petsc-3.4.0/include/mpiuni:
+../petsc-3.4.0/interfaces:
+../../petsc-3.4.0/interfaces/lua:
+../../../petsc-3.4.0/interfaces/lua/src:
+../petsc-3.4.0/systems:
+../../petsc-3.4.0/systems/Apple:
+../../../petsc-3.4.0/systems/Apple/iOS:
+../../../../petsc-3.4.0/systems/Apple/iOS/examples:
+../../../../../petsc-3.4.0/systems/Apple/iOS/examples/examples.xcodeproj:
+../../../../../petsc-3.4.0/systems/Apple/iOS/examples/Classes:
+../../../../petsc-3.4.0/systems/Apple/iOS/testopengl:
+../../../../../petsc-3.4.0/systems/Apple/iOS/testopengl/examples.xcodeproj:
+../../../../../petsc-3.4.0/systems/Apple/iOS/testopengl/Classes:
+../../../../petsc-3.4.0/systems/Apple/iOS/bin:
+../../../../petsc-3.4.0/systems/Apple/iOS/PETSc:
+../../../../../petsc-3.4.0/systems/Apple/iOS/PETSc/PETSc.xcodeproj:
+../../../petsc-3.4.0/systems/Apple/OSX:
+../../../../petsc-3.4.0/systems/Apple/OSX/examples:
+../../../../../petsc-3.4.0/systems/Apple/OSX/examples/PETSc cocoa example:
+../../../../../../petsc-3.4.0/systems/Apple/OSX/examples/PETSc cocoa example/PETSc cocoa example.xcodeproj:
+../../../../../../petsc-3.4.0/systems/Apple/OSX/examples/PETSc cocoa example/PETSc cocoa example:
+../../../../../../../petsc-3.4.0/systems/Apple/OSX/examples/PETSc cocoa example/PETSc cocoa example/en.lproj:
+../../../../../petsc-3.4.0/systems/Apple/OSX/examples/PETSc command line example:
+../../../../../../petsc-3.4.0/systems/Apple/OSX/examples/PETSc command line example/PETSc command line example.xcodeproj:
+../../../../../../petsc-3.4.0/systems/Apple/OSX/examples/PETSc command line example/PETSc command line example:
+../../../../petsc-3.4.0/systems/Apple/OSX/bin:
+../petsc-3.4.0/docs:
+../../petsc-3.4.0/docs/changes:
+../../petsc-3.4.0/docs/manualpages:
+../../../petsc-3.4.0/docs/manualpages/KSP:
+../../../petsc-3.4.0/docs/manualpages/TS:
+../../../petsc-3.4.0/docs/manualpages/SemiLagrange:
+../../../petsc-3.4.0/docs/manualpages/Mat:
+../../../petsc-3.4.0/docs/manualpages/Draw:
+../../../petsc-3.4.0/docs/manualpages/PF:
+../../../petsc-3.4.0/docs/manualpages/Profiling:
+../../../petsc-3.4.0/docs/manualpages/Vec:
+../../../petsc-3.4.0/docs/manualpages/SNES:
+../../../petsc-3.4.0/docs/manualpages/PC:
+../../../petsc-3.4.0/docs/manualpages/AO:
+../../../petsc-3.4.0/docs/manualpages/DM:
+../../../petsc-3.4.0/docs/manualpages/Viewer:
+../../../petsc-3.4.0/docs/manualpages/MatOrderings:
+../../../petsc-3.4.0/docs/manualpages/MatFD:
+../../../petsc-3.4.0/docs/manualpages/concepts:
+../../../petsc-3.4.0/docs/manualpages/PetscThreadComm:
+../../../petsc-3.4.0/docs/manualpages/Sys:
+../../../petsc-3.4.0/docs/manualpages/IS:
+../../../petsc-3.4.0/docs/manualpages/PetscSF:
+../petsc-3.4.0/conf:
+../petsc-3.4.0/share:
+../../petsc-3.4.0/share/petsc:
+../../../petsc-3.4.0/share/petsc/datafiles:
+../../../../petsc-3.4.0/share/petsc/datafiles/meshes:
+../../../../petsc-3.4.0/share/petsc/datafiles/matrices:
+Starting REAL configure-make process...
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The version of PETSc you are using is out-of-date, we recommend updating to the new release
+ Available Version: 3.4.3   Installed Version: 3.4
+http://www.mcs.anl.gov/petsc/download/index.html
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+             Configuring PETSc to compile on your system                       
+===============================================================================
+[?1034hTESTING: configureExternalPackagesDir from config.framework(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/framework.py:821)
+TESTING: configureDebuggers from PETSc.utilities.debuggers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/debuggers.py:22)
+TESTING: configureCLanguage from PETSc.utilities.languages(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/languages.py:28)
+TESTING: configureFortranLanguage from PETSc.utilities.languages(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/languages.py:37)
+TESTING: configureMake from config.programs(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/programs.py:24)
+TESTING: configureMkdir from config.programs(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/programs.py:111)
+TESTING: configurePrograms from config.programs(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/programs.py:133)
+TESTING: configureGit from config.sourceControl(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/sourceControl.py:24)
+TESTING: configureMercurial from config.sourceControl(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/sourceControl.py:35)
+TESTING: configureCVS from config.sourceControl(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/sourceControl.py:46)
+TESTING: configureSubversion from config.sourceControl(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/sourceControl.py:55)
+TESTING: configureDirectories from PETSc.utilities.petscdir(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/petscdir.py:28)
+TESTING: configureExternalPackagesDir from PETSc.utilities.petscdir(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/petscdir.py:77)
+TESTING: configureInstallationMethod from PETSc.utilities.petscdir(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/petscdir.py:84)
+TESTING: configureETags from PETSc.utilities.Etags(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/Etags.py:27)
+TESTING: getDatafilespath from PETSc.utilities.dataFilesPath(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/dataFilesPath.py:29)
+TESTING: printEnvVariables from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1504)
+TESTING: resetEnvCompilers from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1511)
+TESTING: checkMPICompilerOverride from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1476)
+TESTING: requireMpiLdPath from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1495)
+TESTING: checkVendor from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:399)
+TESTING: checkInitialFlags from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:409)
+TESTING: checkCCompiler from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:525)
+TESTING: checkCPreprocessor from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:560)
+TESTING: checkCUDACompiler from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:594)
+TESTING: checkCUDAPreprocessor from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:632)
+TESTING: checkCxxCompiler from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:735)
+TESTING: checkCxxPreprocessor from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:773)
+TESTING: checkFortranCompiler from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:882)
+TESTING: checkFortranComments from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:901)
+TESTING: checkPIC from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:964)
+TESTING: checkLargeFileIO from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:998)
+TESTING: checkArchiver from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1097)
+TESTING: checkSharedLinker from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1212)
+TESTING: checkSharedLinkerPaths from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1290)
+TESTING: checkLibC from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1325)
+TESTING: checkDynamicLinker from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1374)
+TESTING: output from config.setCompilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/setCompilers.py:1420)
+TESTING: configureCompilerFlags from config.compilerFlags(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilerFlags.py:65)
+TESTING: configureDebugging from PETSc.utilities.debugging(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/debugging.py:25)
+TESTING: configureArchitecture from PETSc.utilities.arch(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/arch.py:32)
+TESTING: checkSharedDynamicPicOptions from PETSc.utilities.sharedLibraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/sharedLibraries.py:42)
+TESTING: configureSharedLibraries from PETSc.utilities.sharedLibraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/sharedLibraries.py:63)
+TESTING: configureDynamicLibraries from PETSc.utilities.sharedLibraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/sharedLibraries.py:102)
+TESTING: configureBmakeDir from PETSc.utilities.bmakeDir(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/bmakeDir.py:26)
+TESTING: checkRestrict from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:134)
+TESTING: checkCFormatting from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:306)
+TESTING: checkCStaticInline from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:105)
+TESTING: checkDynamicLoadFlag from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:317)
+TESTING: checkCLibraries from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:161)
+TESTING: checkDependencyGenerationFlag from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:1282)
+TESTING: checkRestrict from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:134)
+TESTING: checkCxxNamespace from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:355)
+TESTING: checkCxxOptionalExtensions from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:330)
+TESTING: checkCxxStaticInline from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:119)
+TESTING: checkCxxLibraries from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:370)
+TESTING: checkFortranTypeSizes from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:528)
+TESTING: checkFortranNameMangling from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:587)
+TESTING: checkFortranNameManglingDouble from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:624)
+TESTING: checkFortranPreprocessor from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:634)
+TESTING: checkFortranDefineCompilerOption from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:655)
+TESTING: checkFortranLibraries from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:671)
+TESTING: checkFortranLinkingCxx from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:1016)
+TESTING: checkFortran90 from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:1051)
+TESTING: checkFortran2003 from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:1064)
+TESTING: checkFortran90Array from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:1084)
+TESTING: checkFortranModuleInclude from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:1171)
+TESTING: checkFortranModuleOutput from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:1237)
+TESTING: setupFrameworkCompilers from config.compilers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/compilers.py:1364)
+TESTING: configureFortranCPP from PETSc.utilities.fortranCPP(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/fortranCPP.py:27)
+TESTING: checkStdC from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:105)
+TESTING: checkStat from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:138)
+TESTING: checkSysWait from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:173)
+TESTING: checkTime from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:195)
+TESTING: checkMath from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:203)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: check from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:77)
+TESTING: checkRecursiveMacros from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:218)
+TESTING: configureCacheDetails from PETSc.utilities.cacheDetails(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/cacheDetails.py:78)
+TESTING: checkMemcmp from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:78)
+TESTING: checkSysinfo from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:102)
+TESTING: checkVPrintf from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:125)
+TESTING: checkVFPrintf from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:132)
+TESTING: checkVSNPrintf from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:139)
+TESTING: checkNanosleep from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:183)
+TESTING: checkSignalHandlerType from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:159)
+TESTING: checkFreeReturnType from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:169)
+TESTING: checkVariableArgumentLists from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:175)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: check from config.functions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/functions.py:29)
+TESTING: configureMemorySize from PETSc.utilities.getResidentSetSize(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/getResidentSetSize.py:32)
+TESTING: configureFPTrap from PETSc.utilities.FPTrap(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/FPTrap.py:27)
+TESTING: check_siginfo_t from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:46)
+TESTING: check__int64 from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:52)
+TESTING: checkSizeTypes from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:58)
+TESTING: checkFileTypes from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:68)
+TESTING: checkIntegerTypes from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:63)
+TESTING: checkPID from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:74)
+TESTING: checkUID from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:78)
+TESTING: checkSignal from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:85)
+TESTING: checkC99Complex from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:106)
+TESTING: checkCxxComplex from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:115)
+TESTING: checkFortranKind from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:136)
+TESTING: checkFortranDReal from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:148)
+TESTING: checkConst from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:156)
+TESTING: checkEndian from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:212)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkSizeof from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:265)
+TESTING: checkBitsPerByte from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:316)
+TESTING: checkVisibility from config.types(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/types.py:362)
+TESTING: configureMemAlign from PETSc.utilities.memAlign(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/memAlign.py:30)
+TESTING: configureCHUD from PETSc.utilities.CHUD(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/CHUD.py:25)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: checkMath from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:224)
+TESTING: checkMathErf from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:240)
+TESTING: checkMathTgamma from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:249)
+TESTING: checkCompression from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:258)
+TESTING: checkRealtime from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:279)
+TESTING: checkDynamic from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:295)
+TESTING: configureMissingDefines from PETSc.utilities.missing(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/missing.py:35)
+TESTING: configureMissingUtypeTypedefs from PETSc.utilities.missing(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/missing.py:45)
+TESTING: configureMissingFunctions from PETSc.utilities.missing(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/missing.py:51)
+TESTING: configureMissingSignals from PETSc.utilities.missing(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/missing.py:71)
+TESTING: configureMissingGetdomainnamePrototype from PETSc.utilities.missing(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/missing.py:88)
+TESTING: configureMissingSrandPrototype from PETSc.utilities.missing(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/missing.py:110)
+TESTING: configureMissingIntelFastPrototypes from PETSc.utilities.missing(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/missing.py:134)
+TESTING: configureTimers from PETSc.utilities.timer(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/timer.py:35)
+TESTING: configureFortranCommandLine from PETSc.utilities.fortranCommandLine(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/fortranCommandLine.py:27)
+TESTING: configureScalarType from PETSc.utilities.scalarTypes(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/scalarTypes.py:37)
+TESTING: configurePrecision from PETSc.utilities.scalarTypes(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/scalarTypes.py:73)
+TESTING: configureLibraryOptions from PETSc.utilities.libraryOptions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/libraryOptions.py:48)
+TESTING: configureISColorValueType from PETSc.utilities.libraryOptions(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/libraryOptions.py:92)
+TESTING: configureLibrary from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:744)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: checkInclude from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:86)
+TESTING: configureConversion from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:214)
+TESTING: configureMPI2 from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:182)
+TESTING: configureTypes from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:234)
+TESTING: configureMPITypes from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:246)
+TESTING: configureMissingPrototypes from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:319)
+TESTING: SGIMPICheck from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:630)
+TESTING: CxxMPICheck from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:640)
+TESTING: FortranMPICheck from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:658)
+TESTING: configureIO from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:683)
+TESTING: findMPIInc from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:720)
+TESTING: checkSharedLibrary from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:132)
+TESTING: configureMPIEXEC from config.packages.MPI(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/MPI.py:145)
+TESTING: configureLibrary from config.packages.hdf5(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/hdf5.py:65)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: checkInclude from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:86)
+TESTING: checkSharedLibrary from config.packages.hdf5(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:518)
+TESTING: alternateConfigureLibrary from config.packages.netcdf(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.netcdf-cxx(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.MOAB(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.exodusii(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.ccafe(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.threadcomm(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.babel(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.boost(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.Sieve(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.mpe(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.papi(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.scientificpython(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.fiat(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.FFC(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.ctetgen(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.yaml(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.fftw(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.pcbddc(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.thrust(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.cusp(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.txpetscgpu(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.cuda(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.Matlab(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/packages/Matlab.py:36)
+TESTING: alternateConfigureLibrary from PETSc.packages.MatlabEngine(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.PVODE(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.hwloc(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.sprng(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: configureLibrary from PETSc.packages.valgrind(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:464)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: checkInclude from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:86)
+TESTING: configureLibrary from PETSc.packages.pthread(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/packages/pthread.py:27)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: checkInclude from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:86)
+TESTING: checkSharedLibrary from PETSc.packages.pthread(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:518)
+TESTING: alternateConfigureLibrary from PETSc.packages.pthreadclasses(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.openmp(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.Chaco(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.Generator(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.pami(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.Numpy(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.P3Dlib(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.expat(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.Suggar(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.PARTY(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.tetgen(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.PTScotch(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.java(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.ams(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.server(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: configureLibrary from PETSc.packages.metis(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:464)
+                  ===============================================================================
+                      Configuring METIS; this may take several minutes
+                  ===============================================================================
+                
+                  ===============================================================================
+                      Compiling METIS; this may take several minutes
+                  ===============================================================================
+                
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: checkInclude from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:86)
+TESTING: checkSharedLibrary from PETSc.packages.metis(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:518)
+TESTING: configureLibrary from PETSc.packages.parmetis(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:464)
+                  ===============================================================================
+                      Configuring ParMETIS; this may take several minutes
+                  ===============================================================================
+                
+                  ===============================================================================
+                      Compiling ParMETIS; this may take several minutes
+                  ===============================================================================
+                
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: checkInclude from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:86)
+TESTING: checkSharedLibrary from PETSc.packages.parmetis(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:518)
+TESTING: alternateConfigureLibrary from PETSc.packages.Mathematica(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.opengl(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.glut(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.X(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.Zoltan(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.Triangle(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.afterimage(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: configureRegression from PETSc.utilities.Regression(/home/johnJoseph/nemo5/libs/petsc/build-real/config/PETSc/utilities/Regression.py:32)
+TESTING: alternateConfigureLibrary from config.packages.f2cblaslapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: configureLibrary from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:441)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: checkLib from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:113)
+TESTING: check64BitBLASIndices from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:554)
+TESTING: checkESSL from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:500)
+TESTING: checkPESSL from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:506)
+TESTING: checkMissing from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:512)
+TESTING: checklsame from config.packages.BlasLapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/packages/BlasLapack.py:532)
+TESTING: alternateConfigureLibrary from config.packages.UMFPACK(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from config.packages.CHOLMOD(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.oski(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.SuperLU(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: alternateConfigureLibrary from PETSc.packages.hypre(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: configureLibrary from PETSc.packages.SuperLU_DIST(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:464)
+                  ===============================================================================
+                      Compiling superlu_dist; this may take several minutes
+                  ===============================================================================
+                
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+TESTING: checkInclude from config.headers(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/headers.py:86)
+TESTING: checkSharedLibrary from PETSc.packages.SuperLU_DIST(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:518)
+TESTING: alternateConfigureLibrary from PETSc.packages.spai(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:522)
+TESTING: configureLibrary from PETSc.packages.scalapack(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/package.py:464)
+TESTING: check from config.libraries(/home/johnJoseph/nemo5/libs/petsc/build-real/config/BuildSystem/config/libraries.py:145)
+*******************************************************************************
+         UNABLE to CONFIGURE with GIVEN OPTIONS    (see configure.log for details):
+-------------------------------------------------------------------------------
+--with-scalapack-lib=['/opt/vol/intel/mkl/lib/intel64/libmkl_scalapack_lp64.a'] and 
+--with-scalapack-include=['/opt/vol/intel/mkl/include'] did not work
+*******************************************************************************
+
+make[1]: Entering directory `/home/johnJoseph/nemo5/libs/petsc/build-real'
+make[1]: Leaving directory `/home/johnJoseph/nemo5/libs/petsc/build-real'

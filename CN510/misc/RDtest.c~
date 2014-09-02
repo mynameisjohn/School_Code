@@ -1,0 +1,16 @@
+#include "CNTools.h"
+#include "stdio.h"
+
+typedef T float;
+
+int main(){
+
+  T x0=1.0,x=0,A=50;
+  T t=0,tMax=12;
+  while (t<=tMax){
+
+    t+=DT;
+  }
+
+  return 1;
+}

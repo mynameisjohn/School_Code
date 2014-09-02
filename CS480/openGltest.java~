@@ -1,0 +1,6 @@
+import <GL/glut.h>;
+
+public class openGltest
+{
+  
+}

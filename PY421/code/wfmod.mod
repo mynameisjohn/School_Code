@@ -1,0 +1,89 @@
+GFORTRAN module created from wfmod.f90 on Tue Mar 26 10:57:51 2013
+If you edit this, you'll get what you deserve.
+
+(() () () () () () () () () () () () () () () () () () () () ())
+
+()
+
+(('input' '' 2 3 4))
+
+()
+
+()
+
+(5 'expk' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+DIMENSION) (COMPLEX 8 ()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 ()) 0
+'0') (CONSTANT (INTEGER 4 ()) 0 '511')) 0 () ())
+6 'expv' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+DIMENSION) (COMPLEX 8 ()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 ()) 0
+'0') (CONSTANT (INTEGER 4 ()) 0 '511')) 0 () ())
+7 'dt' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (REAL 8
+()) 0 0 () () 0 () ())
+8 'hbar' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+REAL 8 ()) 0 0 () () 0 () ())
+9 'a' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (REAL 8
+()) 0 0 () () 0 () ())
+3 'input_integer' 'wfmod' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+FUNCTION) (INTEGER 4 ()) 10 0 (11) () 3 () ())
+4 'input_real' 'wfmod' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+FUNCTION) (REAL 4 ()) 12 0 (13) () 4 () ())
+14 'iu' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+COMPLEX 8 ()) 0 0 () (CONSTANT (COMPLEX 8 ()) 0 '0.00000000000000@0'
+'0.10000000000000@1') () 0 () ())
+15 'nstp' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+INTEGER 4 ()) 0 0 () () 0 () ())
+16 'l' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (REAL
+8 ()) 0 0 () (CONSTANT (REAL 8 ()) 0 '0.32000000000000@2') () 0 () ())
+17 'kx' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+INTEGER 4 ()) 0 0 () (CONSTANT (INTEGER 4 ()) 0 '9') () 0 () ())
+2 'input_string' 'wfmod' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+FUNCTION) (CHARACTER 1 ((CONSTANT (INTEGER 4 ()) 0 '80'))) 18 0 (19 20)
+() 2 () ())
+21 'nxg' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+INTEGER 4 ()) 0 0 () (CONSTANT (INTEGER 4 ()) 0 '512') () 0 () ())
+22 'nx' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+INTEGER 4 ()) 0 0 () (CONSTANT (INTEGER 4 ()) 0 '512') () 0 () ())
+23 'psisf' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+REAL 8 ()) 0 0 () (CONSTANT (REAL 8 ()) 0 '0.50000000000000@1') () 0 ()
+())
+24 'psi' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+DIMENSION) (COMPLEX 8 ()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 ()) 0
+'0') (CONSTANT (INTEGER 4 ()) 0 '511')) 0 () ())
+25 'pi' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+REAL 8 ()) 0 0 () (CONSTANT (REAL 8 ()) 0 '0.3243f6a8885a30@1') () 0 ()
+())
+26 'selected_real_kind' '(intrinsic)' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN FUNCTION) (UNKNOWN 0 ()) 0 0 () () 26 () ())
+27 'real8' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+INTEGER 4 ()) 0 0 () (CONSTANT (INTEGER 4 ()) 0 '8') () 0 () ())
+28 'twopi' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+REAL 8 ()) 0 0 () (CONSTANT (REAL 8 ()) 0 '0.6487ed5110b460@1') () 0 ()
+())
+29 'nxsk' 'wfmod' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+INTEGER 4 ()) 0 0 () (CONSTANT (INTEGER 4 ()) 0 '1') () 0 () ())
+30 'wfmod' 'wfmod' 1 ((MODULE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN) (
+UNKNOWN 0 ()) 0 0 () () 0 () ())
+31 'v' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+DIMENSION) (REAL 8 ()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 ()) 0 '0')
+(CONSTANT (INTEGER 4 ()) 0 '511')) 0 () ())
+32 'x' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+DIMENSION) (REAL 8 ()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 ()) 0 '0')
+(CONSTANT (INTEGER 4 ()) 0 '511')) 0 () ())
+33 'wkspace' 'wfmod' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+DIMENSION) (COMPLEX 8 ()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 ()) 0
+'1') (CONSTANT (INTEGER 4 ()) 0 '527')) 0 () ())
+13 'a' '' 12 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN DUMMY) (
+REAL 4 ()) 0 0 () () 0 () ())
+19 'a' '' 18 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN DUMMY) (
+CHARACTER 1 ((CONSTANT (INTEGER 4 ()) 0 '80'))) 0 0 () () 0 () ())
+20 'l' '' 18 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN DUMMY) (
+INTEGER 4 ()) 0 0 () () 0 () ())
+11 'a' '' 10 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN DUMMY) (
+INTEGER 4 ()) 0 0 () () 0 () ())
+)
+
+('a' 0 9 'hbar' 0 8 'dt' 0 7 'expv' 0 6 'expk' 0 5 'wkspace' 0 33 'v' 0
+31 'nxsk' 0 29 'nx' 0 22 'input_string' 0 2 'input_real' 0 4
+'input_integer' 0 3 'kx' 0 17 'iu' 0 14 'l' 0 16 'nstp' 0 15 'nxg' 0 21
+'twopi' 0 28 'real8' 0 27 'pi' 0 25 'psi' 0 24 'psisf' 0 23
+'selected_real_kind' 0 26 'wfmod' 0 30 'x' 0 32)

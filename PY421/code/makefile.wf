@@ -1,0 +1,46 @@
+.KEEP_STATE:    
+.SUFFIXES: .o .f90 .c .mod
+
+FLAGS = -O3 
+
+F90 = gfortran
+CC = cc
+
+IPATH=
+LPATH= -L/usr/X11R6/lib/ 
+GLUTLIB= -lglut -lGLU -lGL -lXmu -lXext -lX11
+
+.f90.o: 
+	$(F90) -c $(FLAGS) $*.f90
+.f90.mod: 
+	$(F90) -c $(FLAGS) $*.f90
+.c.o:
+	$(CC) -c $(FLAGS) $(IPATH) $*.c
+.mod.o:
+	
+wf2: wf2.o wfsub1.o wfmod.o
+	$(F90) -o wf2 wf2.o wfsub1.o wfmod.o $(FLAGS) $(MLIB) $(LPATH) $(GLUTLIB)
+
+wf: wf.o wfsub.o wfmod.o 
+	$(F90) -o wf wf.o wfsub.o wfmod.o $(FLAGS) $(MLIB) $(LPATH) $(GLUTLIB)
+
+wfct: wfct.o wfsubct.o wfmodct.o 
+	$(F90) -o wfct wfct.o wfsubct.o wfmodct.o $(FLAGS) $(MLIB) $(LPATH) $(GLUTLIB) 
+
+wf.o: wf.c
+
+wfct.o: wfct.c
+
+wf2.o: wf2.c
+
+wfmod.mod: wfmod.f90
+
+wfmod.o: wfmod.mod wfmod.f90
+
+wfmodct.o: wfmodct.f90
+
+wfsub.o: wfmod.o wfsub.f90
+
+wfsubct.o: wfmodct.o wfsubct.f90
+
+wfsub1.o: wfmod.o wfsub1.f90
