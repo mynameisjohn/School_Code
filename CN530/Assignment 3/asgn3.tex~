@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 1cm
+\parskip 1mm
+\usepackage{amsmath}
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+
+{\Large\bf CN 530 - Computational Models of Vision}
+
+\bigskip
+
+{\large\bf Assignment \# 3}
+\vspace{0.1mm}
+
+\end{center}
+
+{\bf Abstract}
+\smallskip
+
+The goal of this assignment is to replicate the one-dimensional data produced by the model outlined in Grossberg and Mingolla (1988). I have constructed the six layer model in C by supplied it with several input patterns. Each layer processes the input of the previous in order to produce the final result, and we will observe the output of several layers and try to understand how their coming together yielded the final result. 
+\bigskip
+
+{\bf Item 1}
+\smallskip
+
+The model outlined in the aforementioned paper consists of six layers. The first layer recieves the input and the second performs a convolution with a difference-of-Gaussians (DoG) kernel. Layers 3 through 5 determine the direction of edges detected by Layer 2 and use this information to generate boundaries within the input space. In the final layer the brightness data from Layer two is allowed to diffuse throughout the image; this diffusion process is halted by the presence of boundaries that were detected in layer 5. 
+\smallskip
+
+The goal of this is to replicate the process of filling in, whereby object features spread throughout the interior of the space they occupy within an image. This model was implemented by me in C using the following $\verbatim{struct}$ to describe a layer:
+
+\begin{verbatim}
+struct Layer{
+   float * input;
+   float * output;
+   FILE * data;
+}
+\end{verbatim} 
+
+The input of each layer is always the output of the previous layer, and accordingly every layer's output goes into another's input. The data file is used to output the results of each layer. 
+\smallskip
+
+In all layers solutions were computed at equilibirium, though in the future I would like to explore the temporal dynamics of each layer in a real time simulation. The sixth layer is represented by a nonlinear diffusion equation, and the equilibrium solution of this equation is a system of equations. I solved this equation using the relaxation procedure outlined in the assignment, although I found this method to be wholeheartedly unsatisfactory. I iterated the relaxation procedure 100,000 times, and while the results are somewhat correct this procedure was by far the most computationaly expensive part of the simulation. 
+\smallskip
+
+{\bf PUT SOME GRAPHS HERE}
+\bigskip 
+
+{\bf Item 2}
+\smallskip
+
+As I mentioned before, the results of Layer Six are computed by allowing the results from Layer 2 to spread within the boundaries computed by Layer 5. In order to create a ramped output in Layer 6, it follows that we should generate two boundaries in Layer 5. At one of these boundaries the response of Layer two should be larger than it is at the other boundary, and the diffusion process should result in a smooth gradient between the two. 
+\smallskip
+
+The machinery for creating a ramp exists within Layer 6, but I had trouble getting Layer 2 to have the output I desired. More often than not the results would go zero. This is because of the aspect of the distant-dependent shunting equation used to model the neurons in this layer. This equation results in a ``normalized'' input across nodes, meaning that any sort of brightness gradient gets transformed into a uniform input. 
+\smallskip
+
+It may be possible to generate a ramp with an additive equation used to model the receptive fields of layer 2. We could also allow some of the input going directly into Layer 1 to impact Layer 6 in some way in order to counteract some of these effects. The normalization and edge detection properties of Layer 2 are useful generating the data that will be used to create the BCS, but they may not be the best input to supply to Layer 6 in this case. 
+\bigskip
+
+{\bf Item 3}
+\smallskip
+
+My input for Item 3 consists of a 100-cell receptive field. The input of the first and last 10 nodes are 0, and every node in between has an input of 10. The 1-d projection of the half-toroidal kernel described by Craft would look as follows:
+\smallskip
+
+{\bf PUT GRAPH HERE}
+
+It is essentially the two outer bumps of the DoG kernel. The left bump and right bump form the two fragmented kernels mentioned in the assignment.  
+\smallskip
+
+To numerically integrate these equations I will be using the Rotter-Deismann method (the equations are linear, so this seems Kosher.) 
+
+\end{document}

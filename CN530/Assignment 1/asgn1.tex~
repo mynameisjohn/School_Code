@@ -1,0 +1,22 @@
+\documentclass[a4paper,12pt]{article}
+\parindent 0pt
+\parskip 1mm
+\usepackage{amsmath}
+\usepackage[dvips]{epsfig}
+
+\begin{document}
+
+\begin{center}
+
+{\Large\bf CN 510 - Principles and Methods of Cognitive and Neural Modeling}
+
+\bigskip
+
+{\large\bf Assignment \# 10}
+\smallskip
+
+{\large\bf John Joseph}
+\end{center}
+
+
+\end{document}

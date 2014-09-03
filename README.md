@@ -8,6 +8,8 @@ math functions I wrote to help me solve a problem or generate some data for a re
 
 CN510 - Principles and Methods of Cognitive and Neural Modeling 
 
+CN530 - Computational Models of Vision
+
 CS480 - Introduction to Computer Graphics
 
 MA555 - Numerical Analysis 1
