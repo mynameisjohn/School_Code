@@ -62,6 +62,8 @@ public class PolygonDrawer {
 		gl.glStencilFunc(GL.GL_NEVER, 0, 1);//Set the test to always fail. 
 		gl.glStencilOp(GL.GL_INVERT, GL.GL_INVERT, GL.GL_INVERT);//No matter what the bits are inverted, and the last two arguments shouldn't come up anyway
 
+		//When we draw here we flip every bit touched by a triangle in the stencil buffer.
+		//Since we are inverting, bits that get drawn twice end up with a zero and are not drawn
 		gl.glBegin(GL.GL_TRIANGLE_FAN);//Draw the polygon using the triangle fan method
 		gl.glVertex2f(polygon.vertices.get(0).x, polygon.vertices.get(0).y);//First vertex
 		for (int i=1;i<polygon.vertices.size()-1;i++)
